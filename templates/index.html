@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星海余烬 · EMBERS OF THE STAR SEA</title>
+<link rel="stylesheet" href="/static/app.css?v=0.05">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+<!-- 背景 -->
+<canvas id="bg-stars"></canvas>
+<div id="bg-nebula"></div>
+<div id="bg-scanlines"></div>
+<div id="bg-vignette"></div>
+
+<!-- 标题界面 -->
+<div id="title-screen" class="screen-overlay">
+  <div class="title-inner">
+    <div class="title-sigil">✦</div>
+    <h1 class="title-logo">星海余烬</h1>
+    <div class="title-sub">EMBERS OF THE STAR SEA</div>
+    <div class="title-meta">v<span id="title-version">0.05</span> · 余烬纪元 · 星历 <span id="title-year">3107</span></div>
+    <div class="title-actions">
+      <button class="btn btn-primary btn-big" id="btn-new-game">✦ 开 启 新 的 航 程</button>
+      <button class="btn btn-ghost btn-big" id="btn-continue">继续征程</button>
+      <button class="btn btn-ghost" id="btn-title-settings">⚙ 设置</button>
+    </div>
+    <div id="save-list" class="save-list"></div>
+    <div class="title-foot">框架演示版 · 零依赖 · 原创世界观 · 酒馆兼容角色卡</div>
+  </div>
+</div>
+
+<!-- 主应用 -->
+<div id="app" class="hidden">
+  <!-- 顶栏 -->
+  <header id="topbar">
+    <div class="tb-brand" id="tb-brand" title="返回星图">
+      <span class="tb-sigil">✦</span>
+      <span class="tb-title">星海余烬</span>
+      <span class="tb-ver">v<span id="tb-version">0.05</span></span>
+    </div>
+    <div class="tb-center">
+      <div class="tb-chip tb-date" title="当前日期">星历 <b id="tb-year">3107</b> · 第 <b id="tb-day">1</b> 天</div>
+      <div class="tb-chip tb-loc" id="tb-location" title="打开星图">— 未知坐标 —</div>
+    </div>
+    <div class="tb-right">
+      <div class="tb-chip tb-credits" title="资金（晶）">◈ <b id="tb-credits">0</b></div>
+      <div class="tb-chip tb-fuel" title="燃料（渊髓）">◇ <b id="tb-fuel">0</b></div>
+      <div class="tb-chip tb-save" id="tb-save-state" title="存档状态">已同步</div>
+      <button class="tb-btn" id="btn-quick-settings" title="设置">⚙</button>
+    </div>
+  </header>
+
+  <!-- 侧栏 -->
+  <nav id="sidebar">
+    <button class="nav-btn active" data-view="map"><span class="nav-ico">✦</span><span class="nav-label">星图</span></button>
+    <button class="nav-btn" data-view="chat"><span class="nav-ico">◈</span><span class="nav-label">对话</span></button>
+    <button class="nav-btn" data-view="characters"><span class="nav-ico">❖</span><span class="nav-label">角色</span></button>
+    <button class="nav-btn" data-view="lorebook"><span class="nav-ico">❡</span><span class="nav-label">世界书</span></button>
+    <button class="nav-btn" data-view="fleet"><span class="nav-ico">➤</span><span class="nav-label">舰队</span></button>
+    <button class="nav-btn" data-view="market"><span class="nav-ico">◈</span><span class="nav-label">市场</span></button>
+    <button class="nav-btn" data-view="player"><span class="nav-ico">✧</span><span class="nav-label">人物</span></button>
+    <button class="nav-btn" data-view="settings"><span class="nav-ico">⚙</span><span class="nav-label">设置</span></button>
+    <div class="nav-spacer"></div>
+    <button class="nav-btn nav-quit" id="btn-to-title" title="返回标题界面"><span class="nav-ico">◄</span><span class="nav-label">退出</span></button>
+  </nav>
+
+  <!-- 主区域 -->
+  <main id="main">
+    <!-- 星图 -->
+    <section class="panel active" id="panel-map">
+      <div id="map-wrap">
+        <canvas id="map-canvas"></canvas>
+        <div class="map-topbar">
+          <div class="map-search">
+            <input id="map-search-input" type="text" placeholder="搜索星系 / 行星…" autocomplete="off">
+            <div id="map-search-results" class="map-search-results hidden"></div>
+          </div>
+          <div class="map-filters" id="map-filters">
+            <label class="fchip active" data-filter="territory"><i class="fdot"></i>势力</label>
+            <label class="fchip active" data-filter="lanes"><i class="fdot"></i>航道</label>
+            <label class="fchip active" data-filter="gates"><i class="fdot"></i>星门</label>
+            <label class="fchip active" data-filter="names"><i class="fdot"></i>名称</label>
+            <label class="fchip" data-filter="fog"><i class="fdot"></i>迷雾</label>
+          </div>
+        </div>
+        <div class="map-legend" id="map-legend"></div>
+        <div class="map-zoombar">
+          <button id="map-zoom-in" title="放大">＋</button>
+          <button id="map-zoom-out" title="缩小">－</button>
+          <button id="map-zoom-home" title="回到当前星系">⌂</button>
+          <button id="map-zoom-reset" title="全景">⛶</button>
+        </div>
+        <div id="map-tooltip" class="map-tooltip hidden"></div>
+        <div class="map-hint" id="map-hint">滚轮缩放 · 拖动平移 · 双击进入星系 · 点击星系查看详情</div>
+        <aside id="map-system-panel" class="hidden"></aside>
+        <div id="map-breadcrumb" class="map-breadcrumb hidden"></div>
+      </div>
+    </section>
+
+    <!-- 对话 -->
+    <section class="panel" id="panel-chat">
+      <div id="chat-wrap">
+        <header class="chat-header">
+          <div class="chat-npc-select">
+            <span class="label">与谁对话</span>
+            <select id="chat-npc-select"></select>
+          </div>
+          <div class="chat-header-actions">
+            <button class="btn btn-ghost btn-sm" id="chat-clear">清空上下文</button>
+            <button class="btn btn-ghost btn-sm" id="chat-goto-settings">AI 连接</button>
+          </div>
+        </header>
+        <div id="chat-messages"></div>
+        <div class="chat-compose">
+          <textarea id="chat-input" rows="1" placeholder="你的行动、台词或指令……（Enter 发送，Shift+Enter 换行）"></textarea>
+          <button class="btn btn-primary" id="chat-send">跃 迁 ▸</button>
+        </div>
+        <div class="chat-foot" id="chat-foot">未配置 AI 时对话不可用 · 可在「设置 → AI 连接」接入任意 OpenAI 兼容接口</div>
+      </div>
+    </section>
+
+    <!-- 角色 -->
+    <section class="panel" id="panel-characters">
+      <div class="panel-head">
+        <div>
+          <h2>星海人物志</h2>
+          <p class="sub">四十位原创角色 · 点击查看完整档案</p>
+        </div>
+        <div class="head-tools">
+          <input id="char-search" type="text" placeholder="搜索角色…">
+          <select id="char-faction-filter"><option value="">全部势力</option></select>
+        </div>
+      </div>
+      <div id="char-grid" class="char-grid"></div>
+    </section>
+
+    <!-- 世界书 -->
+    <section class="panel" id="panel-lorebook">
+      <div class="panel-head">
+        <div>
+          <h2>星海世界书</h2>
+          <p class="sub">八十条原创设定 · 历史 / 派系 / 政治 / 文化 / 经济 / 科技 / 地理 / 物种 / 危险</p>
+        </div>
+      </div>
+      <div class="lore-layout">
+        <aside class="lore-side">
+          <input id="lore-search" type="text" placeholder="搜索世界书…">
+          <div id="lore-cats" class="lore-cats"></div>
+        </aside>
+        <div class="lore-main">
+          <div id="lore-list" class="lore-list"></div>
+          <div id="lore-detail" class="lore-detail">
+            <div class="lore-empty">✦ 选择左侧条目阅读世界书</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 舰队 -->
+    <section class="panel" id="panel-fleet">
+      <div class="panel-head">
+        <div>
+          <h2>舰队与船舱</h2>
+          <p class="sub">你的船，你的家，你在这片星海里的全部底气</p>
+        </div>
+        <div class="head-tools" id="fleet-actions"></div>
+      </div>
+      <div id="fleet-content"></div>
+    </section>
+
+    <!-- 市场 -->
+    <section class="panel" id="panel-market">
+      <div class="panel-head">
+        <div>
+          <h2 id="market-title">市场</h2>
+          <p class="sub" id="market-sub">价格随星系、时日波动</p>
+        </div>
+        <div class="head-tools">
+          <button class="btn btn-ghost btn-sm" id="market-jump">⌂ 返回当前位置</button>
+        </div>
+      </div>
+      <div id="market-content"></div>
+    </section>
+
+    <!-- 人物 -->
+    <section class="panel" id="panel-player">
+      <div class="panel-head">
+        <div>
+          <h2 id="player-name-title">人物面板</h2>
+          <p class="sub" id="player-origin-sub"></p>
+        </div>
+      </div>
+      <div id="player-content"></div>
+    </section>
+
+    <!-- 设置 -->
+    <section class="panel" id="panel-settings">
+      <div class="panel-head">
+        <div><h2>设置</h2><p class="sub">AI 连接 · 界面 · 数据 · 关于</p></div>
+      </div>
+      <div id="settings-content"></div>
+    </section>
+  </main>
+</div>
+
+<!-- 通用模态 -->
+<div id="modal-root" class="modal-root hidden">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-box" id="modal-box"></div>
+</div>
+
+<!-- 提示浮层 -->
+<div id="toast-root"></div>
+
+<script src="/static/map.js?v=0.05"></script>
+<script src="/static/app.js?v=0.05"></script>
+</body>
+</html>

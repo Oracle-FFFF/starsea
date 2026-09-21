@@ -1,0 +1,2 @@
+# 《星海余烬》零第三方依赖 —— 仅需 Python 3.7+ 标准库，无需安装任何包。
+# 如果系统里没有 Python，请前往 https://www.python.org/downloads/ 安装（勾选 Add to PATH）。
