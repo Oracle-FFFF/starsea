@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "count": 24,
+    "note": "重要势力星球的固定大纲（与编年史同级），随启动合并为世界书条目；边缘星球按「条目+势力+类型」半随机生成、按存档存储。"
+  },
+  "planets": [
+    {
+      "system": "lumen-loom", "planet": "lumen-loom-a", "name": "Lumina Prime", "faction": "white-tower", "danger": 1,
+      "climate": "轨道环调节的温和四季，偶有带电离子雨，夜空中永远浮着光织环的银弧。",
+      "economy": "专利交易、知识服务与高端制造——银河知识经济的定价中心。",
+      "politics": "合众国议会直辖，公民评分决定医疗、交通与入籍资格。",
+      "culture": "理性而内敛；大学城的公开答辩与专利听证会是最高级的社交活动。",
+      "species": "太空裔与母星人为主，少数义体化者担任工程要职。",
+      "resources": "数据晶片、超导线圈、专利产品。",
+      "regions": [
+        { "id": "lumen-loom-a-r1", "name": "光织议会区", "type": "政枢", "danger": 1, "tags": ["政治", "安检", "精英"], "desc": "议会穹顶与各部大楼所在，公民评分不够的人在三个街区外就会被引导离开。" },
+        { "id": "lumen-loom-a-r2", "name": "大学城环带", "type": "学术", "danger": 1, "tags": ["学术", "图书馆", "实验室"], "desc": "白塔大学与数十座研究所环绕主星赤道，凌晨的自动售货机前永远排着写论文的人。" },
+        { "id": "lumen-loom-a-r3", "name": "海港下城区", "type": "市井", "danger": 2, "tags": ["港口", "黑市", "移民"], "desc": "近海港口与移民街区，鱼腥味与走私箱的味道混在一起，情报贩子在此出没。" }
+      ]
+    },
+    {
+      "system": "lumen-loom", "planet": "lumen-loom-b", "name": "Loomlight Ring", "faction": "white-tower", "danger": 1,
+      "climate": "人造恒温微重力，昼夜由环形灯带人工划分。",
+      "economy": "心网数据中心与专利登记中枢，机房租金按毫秒计。",
+      "politics": "心网管理局直辖，服务器即疆土。",
+      "culture": "永不停机的灯火与夜班文化，「环上人」以三班倒为荣。",
+      "species": "太空裔占九成，母星人来此会「晕环」。",
+      "resources": "数据晶片、超导线圈。",
+      "regions": [
+        { "id": "lumen-loom-b-r1", "name": "中枢塔区", "type": "政枢", "danger": 1, "tags": ["心网", "禁入"], "desc": "心网核心机房所在，未经授权的接近会被无源安保蜂群「护送」离场。" },
+        { "id": "lumen-loom-b-r2", "name": "登记回廊", "type": "商枢", "danger": 1, "tags": ["专利", "公证"], "desc": "专利登记与数据公证的回廊，排队的人攥着晶片像攥着命。" },
+        { "id": "lumen-loom-b-r3", "name": "环下夜市", "type": "市井", "danger": 2, "tags": ["夜市", "走私"], "desc": "环带背面的夜市，卖一切「没有登记过」的东西。" }
+      ]
+    },
+    {
+      "system": "lumen-loom", "planet": "lumen-loom-c", "name": "Silent Moon", "faction": "white-tower", "danger": 2,
+      "climate": "无大气，昼夜温差三百度，静得能听见自己的心跳。",
+      "economy": "报废数据阵列的拆解与黑档案交易。",
+      "politics": "名义属合众国，实际由黑市行会自治。",
+      "culture": "「沉默即美德」——这里的人不问来路，也不报真名。",
+      "species": "拾荒者、档案贩子与逃税学者的杂居地。",
+      "resources": "数据晶片、流明文物。",
+      "regions": [
+        { "id": "lumen-loom-c-r1", "name": "数据坟场", "type": "废墟", "danger": 2, "tags": ["拾荒", "辐射"], "desc": "报废阵列堆成的山谷，报废舱里偶尔还能通电的终端会自己亮起来。" },
+        { "id": "lumen-loom-c-r2", "name": "黑档案市场", "type": "黑市", "danger": 3, "tags": ["黑市", "情报"], "desc": "按「层」收费的档案市场，越往深处，卖的东西越见不得光。" },
+        { "id": "lumen-loom-c-r3", "name": "静默镇", "type": "棚户", "danger": 2, "tags": ["棚户", "避难"], "desc": "半埋在地下的定居点，居民用气闸开门，用眼神打招呼。" }
+      ]
+    },
+    {
+      "system": "crimson-throne", "planet": "crimson-a", "name": "Flamecourt", "faction": "crimson", "danger": 2,
+      "climate": "赤红荒漠，白昼酷热、夜晚冰寒，沙暴来临时连王座广场都看不清。",
+      "economy": "皇庄贡赋与封臣税，皇都的每一枚金币都刻着王座纹。",
+      "politics": "永燃王座直辖，七十二侯领的使节与密探把皇都挤得满满当当。",
+      "culture": "荣耀与仪轨的巅峰：加冕、册封与处刑在同一座广场上举行。",
+      "species": "基因雕琢者把持宫廷，母星人平民与庄园奴隶撑起市井。",
+      "resources": "稀土矿、奢侈品。",
+      "regions": [
+        { "id": "crimson-a-r1", "name": "王座广场", "type": "政枢", "danger": 2, "tags": ["王座", "仪轨", "禁入"], "desc": "万阶长阶尽头的广场，永燃王座之火昼夜不熄，未经召见者不得拾级而上。" },
+        { "id": "crimson-a-r2", "name": "封臣回廊", "type": "政枢", "danger": 2, "tags": ["封臣", "外交", "密探"], "desc": "七十二侯领使节的驻地，回廊里每一句寒暄都是剑鞘里的刀。" },
+        { "id": "crimson-a-r3", "name": "焰庭市集", "type": "市井", "danger": 2, "tags": ["市集", "平民", "杂耍"], "desc": "皇都平民的市集，香料、织毯与处刑新闻在这里一并流通。" }
+      ]
+    },
+    {
+      "system": "crimson-throne", "planet": "crimson-b", "name": "Goldenfield", "faction": "crimson", "danger": 2,
+      "climate": "温带平原，金色的麦浪直达天边，雨季短而猛烈。",
+      "economy": "农业与庄园奴隶制，王朝的粮仓。",
+      "politics": "金穗侯领治下，侯爵的管家比镇长更有权势。",
+      "culture": "丰收祭与农奴苦役并存，麦子越沉，鞭子越轻——也越重。",
+      "species": "母星人农奴为主，监工多为基因雕琢者。",
+      "resources": "合成食物、奢侈品。",
+      "regions": [
+        { "id": "crimson-b-r1", "name": "金穗庄园带", "type": "农业", "danger": 2, "tags": ["庄园", "农奴"], "desc": "连绵的庄园与农奴村落，谷仓下据说埋着帝国晚期的军火库。" },
+        { "id": "crimson-b-r2", "name": "麦港镇", "type": "市井", "danger": 2, "tags": ["港口", "粮商"], "desc": "粮食装船的河港，粮商、税吏与走私者的眼睛都盯着同一杆秤。" },
+        { "id": "crimson-b-r3", "name": "金穗侯堡", "type": "政枢", "danger": 2, "tags": ["侯领", "堡寨"], "desc": "侯爵的堡寨，围墙高得能挡住麦浪，也挡住了想进去的人。" }
+      ]
+    },
+    {
+      "system": "crimson-throne", "planet": "crimson-c", "name": "Frostmoon", "faction": "crimson", "danger": 2,
+      "climate": "冰卫星的极夜冰原，刃风能切开露出的皮肤。",
+      "economy": "军需与驻训补给，冰下矿脉偶有开采。",
+      "politics": "霜刃骑士团驻训地，骑士的剑说话算数。",
+      "culture": "淬刃与守望：新骑士要在极夜里独自守哨三夜，方得佩剑。",
+      "species": "母星人骑士与随军工匠。",
+      "resources": "净水冰、武器模块。",
+      "regions": [
+        { "id": "crimson-c-r1", "name": "淬刃哨堡", "type": "军事", "danger": 3, "tags": ["骑士团", "哨堡"], "desc": "骑士团驻训的堡群，演武场的地面被剑痕犁了一遍又一遍。" },
+        { "id": "crimson-c-r2", "name": "冰矿村", "type": "矿区", "danger": 2, "tags": ["冰矿", "矿工"], "desc": "开采净水冰的矿村，矿工们把冻伤当勋章。" },
+        { "id": "crimson-c-r3", "name": "极夜旅栈", "type": "市井", "danger": 2, "tags": ["旅栈", "补给"], "desc": "冰原上唯一的旅栈，壁炉的火与骑士的闲话都滚烫。" }
+      ]
+    },
+    {
+      "system": "former-crown", "planet": "former-crown-a", "name": "Ashen Dome", "faction": "crimson", "danger": 3,
+      "climate": "剧毒灰霾笼罩，酸雨常年在断裂的穹顶残骸上敲出丧钟声。",
+      "economy": "盗掘、朝圣与「遗物回收」特许经营。",
+      "politics": "无主之地：绯冠的名义封地、盗掘行会、教会朝圣团三方暗斗。",
+      "culture": "亡国记忆与盗墓行话——旧都的每一块残砖都有价格。",
+      "species": "流民、盗掘者与戴防毒面具的朝圣者。",
+      "resources": "流明文物、舰体合金。",
+      "regions": [
+        { "id": "former-crown-a-r1", "name": "灰穹之下", "type": "废墟", "danger": 4, "tags": ["旧都", "毒气", "宝藏"], "desc": "断裂的环都会坠向地表的遗迹，帝国最后的宫廷埋在灰霾深处。" },
+        { "id": "former-crown-a-r2", "name": "盗掘营地", "type": "市井", "danger": 3, "tags": ["盗掘", "黑市"], "desc": "盗掘者的营地，白天卖补给，夜里销赃物。" },
+        { "id": "former-crown-a-r3", "name": "朝圣台", "type": "宗教", "danger": 2, "tags": ["朝圣", "教会"], "desc": "教会设立的朝圣台，信徒对着灰穹的方向跪成一片。" }
+      ]
+    },
+    {
+      "system": "tide-port", "planet": "tide-a", "name": "Tidehome", "faction": "blue-tide", "danger": 2,
+      "climate": "暖洋行星，风暴随季风造访，浮城随洋流聚散。",
+      "economy": "交易所群岛与航运保险，每一笔大额交易都掀起一道「潮」。",
+      "politics": "七十二商号合议，信用额度即选票。",
+      "culture": "涨潮开盘、退潮闭市；商人的葬礼上，宣读的是他的清算报表。",
+      "species": "太空裔与母星人，富商多为基因雕琢者。",
+      "resources": "净水冰、奢侈品。",
+      "regions": [
+        { "id": "tide-a-r1", "name": "交易所群岛", "type": "商枢", "danger": 1, "tags": ["交易所", "精英"], "desc": "浮动交易所群岛，挂牌价以光速刷新，落槌声能传遍半个海湾。" },
+        { "id": "tide-a-r2", "name": "浮城运河带", "type": "市井", "danger": 2, "tags": ["运河", "集市"], "desc": "浮城之间的运河带，贡多拉载着货与流言穿梭。" },
+        { "id": "tide-a-r3", "name": "风暴湾", "type": "险地", "danger": 3, "tags": ["风暴", "走私"], "desc": "风暴季才「开放」的湾口，走私船专挑这种天气进港。" }
+      ]
+    },
+    {
+      "system": "tide-port", "planet": "tide-b", "name": "Abacus Ring", "faction": "blue-tide", "danger": 1,
+      "climate": "轨道恒温，金融城的光从不熄灭。",
+      "economy": "光速清算塔林，一秒十万笔。",
+      "politics": "清算公会自治，算法即法律。",
+      "culture": "数字即信仰：员工入职宣誓的对象是一块计算核心。",
+      "species": "太空裔占绝对多数。",
+      "resources": "数据晶片、超导线圈。",
+      "regions": [
+        { "id": "tide-b-r1", "name": "清算塔林", "type": "商枢", "danger": 1, "tags": ["金融", "禁入"], "desc": "清算塔林，机房外的空气都带着静电，非持牌者止步。" },
+        { "id": "tide-b-r2", "name": "算法广场", "type": "市井", "danger": 1, "tags": ["广场", "金融"], "desc": "实时行情环绕的广场，输光身家的人在这里看别人赢。" },
+        { "id": "tide-b-r3", "name": "证交所餐厅", "type": "商枢", "danger": 1, "tags": ["餐厅", "内幕"], "desc": "只对持牌者开放的餐厅，最好的内幕不写在菜单上。" }
+      ]
+    },
+    {
+      "system": "tide-port", "planet": "tide-c", "name": "Silverbay", "faction": "blue-tide", "danger": 2,
+      "climate": "温暖群岛，海风里带着钞票的油墨味。",
+      "economy": "避税庄园与私人信托。",
+      "politics": "商号私领，法律按年费购买。",
+      "culture": "低调炫富：庄园越贵，围墙越矮——反正没人敢进去。",
+      "species": "基因雕琢者富商与仆役。",
+      "resources": "奢侈品、净水冰。",
+      "regions": [
+        { "id": "tide-c-r1", "name": "银滩庄园带", "type": "政枢", "danger": 1, "tags": ["庄园", "富人"], "desc": "巨贾的庄园群岛，门牌上只有家族徽记。" },
+        { "id": "tide-c-r2", "name": "信托港", "type": "商枢", "danger": 1, "tags": ["信托", "银行"], "desc": "私人信托与匿名账户的港口，签名比人更值钱。" },
+        { "id": "tide-c-r3", "name": "仆役镇", "type": "棚户", "danger": 2, "tags": ["仆役", "底层"], "desc": "为庄园服务的仆役聚居地，主人们的秘密在这里按斤卖。" }
+      ]
+    },
+    {
+      "system": "grand-forge", "planet": "forge-a", "name": "Anvil", "faction": "forge", "danger": 3,
+      "climate": "熔岩行星的热浪，空气里永远飘着金属蒸气的味道。",
+      "economy": "重工与义体制造，教团掌控全产业链。",
+      "politics": "大铸师圣裁，教规即律法。",
+      "culture": "铸造即祈祷：每一次落锤都是一声祷词。",
+      "species": "义体化者为主，肉体被视为待淬炼的原矿。",
+      "resources": "舰体合金、义体组件。",
+      "regions": [
+        { "id": "forge-a-r1", "name": "铸造圣堂", "type": "圣域", "danger": 3, "tags": ["教团", "禁入"], "desc": "教团总殿与铸造圣堂，热浪即祷词，未经淬炼者不得入内。" },
+        { "id": "forge-a-r2", "name": "冷却环坞", "type": "工造", "danger": 2, "tags": ["船坞", "工匠"], "desc": "新造舰船的淬火坞，焊光昼夜不熄。" },
+        { "id": "forge-a-r3", "name": "炉渣市集", "type": "市井", "danger": 3, "tags": ["市集", "苦工"], "desc": "苦工与低级信徒的市集，卖的是力气、义体零件和止痛药。" }
+      ]
+    },
+    {
+      "system": "grand-forge", "planet": "forge-b", "name": "Quench Ring", "faction": "forge", "danger": 2,
+      "climate": "环绕大熔炉的冷却巨环，人工恒温但噪声永不停歇。",
+      "economy": "舰船淬火与装甲热处理。",
+      "politics": "教团工务司管辖。",
+      "culture": "淬火礼：新船下水前，全体工人以锤击甲板三声。",
+      "species": "义体化者工人。",
+      "resources": "舰体合金、超导线圈。",
+      "regions": [
+        { "id": "forge-b-r1", "name": "淬火坞段", "type": "工造", "danger": 2, "tags": ["船坞", "高温"], "desc": "船体在此入浴淬火，白雾能瞬间烫熟防护服。" },
+        { "id": "forge-b-r2", "name": "环上工棚", "type": "棚户", "danger": 2, "tags": ["工棚", "工人"], "desc": "工人的居住段，铁架床与焊花同样密集。" },
+        { "id": "forge-b-r3", "name": "质检圣所", "type": "政枢", "danger": 1, "tags": ["质检", "教规"], "desc": "每一块装甲都要在此「聆听教义」——不合格者回炉。" }
+      ]
+    },
+    {
+      "system": "grand-forge", "planet": "forge-c", "name": "Slag Sea", "faction": "forge", "danger": 3,
+      "climate": "废渣平原与尘霾，夜晚废热让地面微微发红。",
+      "economy": "废料回收与二手义体翻新。",
+      "politics": "被教团「淘汰」者的自治野城。",
+      "culture": "野城互助：今天你拉我一把，明天我替你望风。",
+      "species": "义体化者与母星人杂居。",
+      "resources": "稀土矿、舰体合金。",
+      "regions": [
+        { "id": "forge-c-r1", "name": "野城市集", "type": "市井", "danger": 3, "tags": ["野城", "黑市"], "desc": "垃圾山上长出的市集，翻新义体与私酿烈酒同样畅销。" },
+        { "id": "forge-c-r2", "name": "废渣山", "type": "废墟", "danger": 3, "tags": ["拾荒", "废渣"], "desc": "教团倾倒的废渣山，穷苦信徒在此捡拾「圣铁」。" },
+        { "id": "forge-c-r3", "name": "回炉巷", "type": "险地", "danger": 4, "tags": ["帮派", "危险"], "desc": "野城的暗巷，教团巡检从不进来，帮派的刀也不问来路。" }
+      ]
+    },
+    {
+      "system": "homebound", "planet": "homebound-a", "name": "Upper Deck", "faction": "armada", "danger": 2,
+      "climate": "生态穹顶内恒温，阳光是补贴的，按小时计费。",
+      "economy": "集市、手作与舰内以物易物。",
+      "politics": "舰队长老会，甲板议事。",
+      "culture": "归乡歌会：每周日全舰合唱《归乡》，唱错词要被罚补帆。",
+      "species": "太空裔为主，欢迎一切逃亡者。",
+      "resources": "合成食物、数据晶片。",
+      "regions": [
+        { "id": "homebound-a-r1", "name": "长老会甲板", "type": "政枢", "danger": 1, "tags": ["长老会", "议事"], "desc": "长老会的议事甲板，任何舰民都可旁听并举手发言一次。" },
+        { "id": "homebound-a-r2", "name": "穹顶集市", "type": "市井", "danger": 2, "tags": ["集市", "杂货"], "desc": "生态穹顶下的集市，从种子到旧导航仪什么都卖。" },
+        { "id": "homebound-a-r3", "name": "船头观星台", "type": "市井", "danger": 1, "tags": ["观星", "歌会"], "desc": "船头观星台，归乡歌会与离别都在这里举行。" }
+      ]
+    },
+    {
+      "system": "homebound", "planet": "homebound-b", "name": "Engine Deep", "faction": "armada", "danger": 3,
+      "climate": "母舰腹地的酷热蒸汽，汗水落在地板上三秒蒸发。",
+      "economy": "轮机维护与燃料精炼。",
+      "politics": "轮机僧团自治，长老会亦不轻易过问。",
+      "culture": "圣歌与检修祷：僧团把古引擎的轰鸣称为「母舰的心跳」。",
+      "species": "世代服役的太空裔轮机僧。",
+      "resources": "渊髓、超导线圈。",
+      "regions": [
+        { "id": "homebound-b-r1", "name": "轮机深渊", "type": "工造", "danger": 3, "tags": ["轮机", "高温", "禁入"], "desc": "流明古引擎所在，未经僧团许可者踏入即被「心跳」震聋。" },
+        { "id": "homebound-b-r2", "name": "僧团诵经堂", "type": "宗教", "danger": 1, "tags": ["僧团", "圣歌"], "desc": "轮机僧诵经之地，墙上的管道随圣歌共振。" },
+        { "id": "homebound-b-r3", "name": "黑油巷", "type": "棚户", "danger": 3, "tags": ["棚户", "黑工坊"], "desc": "轮机区的棚户街，黑工坊修着「没有编号」的零件。" }
+      ]
+    },
+    {
+      "system": "dawnbreak", "planet": "dawn-a", "name": "Dawn", "faction": "shackle", "danger": 2,
+      "climate": "温和气候，解放区的天空蓝得让逃亡者落泪。",
+      "economy": "合作经济与自给工业，货币流通量很小。",
+      "politics": "革命委员会与自由城邦，人人一票。",
+      "culture": "镣铐熔炉广场的集会：每解放一条航线，就铸一块新砖。",
+      "species": "来自各势力的被解放者，以母星人居多。",
+      "resources": "合成食物、稀土矿。",
+      "regions": [
+        { "id": "dawn-a-r1", "name": "镣铐熔炉广场", "type": "政枢", "danger": 1, "tags": ["集会", "解放"], "desc": "同盟的心脏，熔炉的火光与集会的人声日夜不息。" },
+        { "id": "dawn-a-r2", "name": "自由城邦区", "type": "市井", "danger": 2, "tags": ["城邦", "自由民"], "desc": "解放者的城邦，街名都是历次起义的名字。" },
+        { "id": "dawn-a-r3", "name": "新芽农垦带", "type": "农业", "danger": 1, "tags": ["农垦", "公社"], "desc": "集体农垦带，第一茬新芽的种子是起义军从庄园带出来的。" }
+      ]
+    },
+    {
+      "system": "dawnbreak", "planet": "dawn-b", "name": "Sprout Moon", "faction": "shackle", "danger": 1,
+      "climate": "温和的农垦卫星，四季分明。",
+      "economy": "自给农业与公社仓储。",
+      "politics": "公社制，仓库钥匙轮流保管。",
+      "culture": "丰收与解放纪念日同一天庆祝。",
+      "species": "母星人农奴出身者为主。",
+      "resources": "合成食物、净水冰。",
+      "regions": [
+        { "id": "dawn-b-r1", "name": "公社田埂", "type": "农业", "danger": 1, "tags": ["公社", "农田"], "desc": "望不到头的田埂，每块田都立着解放者的名牌。" },
+        { "id": "dawn-b-r2", "name": "粮仓广场", "type": "市井", "danger": 1, "tags": ["粮仓", "集市"], "desc": "公社粮仓前的广场，以物易物的集市。" },
+        { "id": "dawn-b-r3", "name": "卫星港", "type": "商枢", "danger": 1, "tags": ["港口", "补给"], "desc": "农垦卫星的小港，解放舰队的补给船在此装卸。" }
+      ]
+    },
+    {
+      "system": "bone-port", "planet": "bone-a", "name": "Boneport", "faction": "ash", "danger": 4,
+      "climate": "荒芜岩星上的舰骨浮港，寒风里带着铁锈味。",
+      "economy": "黑市、赎金经济与战利品拍卖。",
+      "politics": "灰潮法则：强者为尊、抢掠为业、出卖为耻。",
+      "culture": "骸骨港的规矩只有三条，人人都背得出来。",
+      "species": "各势力亡命徒的杂居地。",
+      "resources": "舰体合金、武器模块。",
+      "regions": [
+        { "id": "bone-a-r1", "name": "骨桅港区", "type": "市井", "danger": 4, "tags": ["港口", "海盗"], "desc": "用击沉舰艇的桅杆堆成的港区，灰潮旗在最高处飘扬。" },
+        { "id": "bone-a-r2", "name": "角斗场", "type": "险地", "danger": 5, "tags": ["角斗", "赌博"], "desc": "骸骨港的角斗场，输的人从「喂鱼口」直接入海。" },
+        { "id": "bone-a-r3", "name": "赎金交易所", "type": "黑市", "danger": 4, "tags": ["赎金", "人质"], "desc": "人质、赎金与眼泪在此明码标价，谈判人比法官体面。" }
+      ]
+    },
+    {
+      "system": "lucent-return", "planet": "lucent-a", "name": "Sanctum", "faction": "lucent", "danger": 2,
+      "climate": "金色草原上的恒光，天空没有太阳，光从门里来。",
+      "economy": "无货币交换，圣所自给自足。",
+      "politics": "圣所隐修，守门人代行一切。",
+      "culture": "守望与静默：每日三次向门行礼，其余时间保持安静。",
+      "species": "流明后裔与自愿守望的各族。",
+      "resources": "流明文物。",
+      "regions": [
+        { "id": "lucent-a-r1", "name": "巨门广场", "type": "圣域", "danger": 1, "tags": ["巨门", "禁入"], "desc": "流明族的巨门矗立于此，门后是光——只有被允许者可见。" },
+        { "id": "lucent-a-r2", "name": "静修草庐", "type": "宗教", "danger": 1, "tags": ["静修", "隐修"], "desc": "守望者的草庐，风里偶尔传来听不懂的星语。" },
+        { "id": "lucent-a-r3", "name": "镜湖岸", "type": "试炼", "danger": 3, "tags": ["试炼", "镜湖"], "desc": "试炼之地，湖面映出的不是天空——看清之前别靠太近。" }
+      ]
+    },
+    {
+      "system": "crossroads", "planet": "cross-a", "name": "Crossroads Station", "faction": "rim", "danger": 2,
+      "climate": "轨道站恒温，通风系统里永远混着二十种食物的味道。",
+      "economy": "中转贸易与补给，四大势力的航路在此打结。",
+      "politics": "星区议会所在地，无主星域的实际中心。",
+      "culture": "万国旗酒馆：一条走廊挂满势力旗，谁也不许在旗前动刀。",
+      "species": "全银河的混居，是星海种族最杂的地方。",
+      "resources": "数据晶片、合成食物。",
+      "regions": [
+        { "id": "cross-a-r1", "name": "枢纽市场", "type": "商枢", "danger": 2, "tags": ["市场", "中转"], "desc": "层层叠叠的站区市场，货从四个方向来，往四个方向去。" },
+        { "id": "cross-a-r2", "name": "万国旗酒馆街", "type": "市井", "danger": 2, "tags": ["酒馆", "情报"], "desc": "酒馆街，玛戈的酒馆就开在这里，情报比酒贵。" },
+        { "id": "cross-a-r3", "name": "议会回廊", "type": "政枢", "danger": 1, "tags": ["议会", "外交"], "desc": "星区议会的回廊，各国代表的脚步声比发言更响。" }
+      ]
+    },
+    {
+      "system": "homesick", "planet": "homesick-a", "name": "Nostalgia", "faction": "rim", "danger": 2,
+      "climate": "温和农业行星，风里据说带着故乡的味道。",
+      "economy": "客栈、墓园与朝圣补给。",
+      "politics": "村落自治，族长议事。",
+      "culture": "望乡台与漂流葬：死者被送入弦流，生者在台上望到天明。",
+      "species": "母星人为主。",
+      "resources": "合成食物、医疗凝胶。",
+      "regions": [
+        { "id": "homesick-a-r1", "name": "望乡台", "type": "市井", "danger": 1, "tags": ["望乡", "朝圣"], "desc": "悬崖上的望乡台，永远有人望着烬海的方向。" },
+        { "id": "homesick-a-r2", "name": "客栈街", "type": "市井", "danger": 1, "tags": ["客栈", "旅人"], "desc": "客栈与墓园一样多的街道，传说能听见故乡的风。" },
+        { "id": "homesick-a-r3", "name": "茶园坡", "type": "农业", "danger": 1, "tags": ["茶园", "僧侣"], "desc": "坡上的茶园，太空僧莫恩常在此以粗茶换故事。" }
+      ]
+    },
+    {
+      "system": "midnight", "planet": "midnight-a", "name": "Midnight Market", "faction": "rim", "danger": 4,
+      "climate": "永夜行星，霓虹是唯一的光，空气冷而湿。",
+      "economy": "黑市万象：违禁义体、赃物、情报与奴隶合同。",
+      "politics": "信使行会与黑帮共治，账本比法律厚。",
+      "culture": "霓虹与暗语：讨价还价要用切口，报错切口等于自报来路。",
+      "species": "义体化者与深渊裔为主。",
+      "resources": "武器模块、数据晶片、流明文物。",
+      "regions": [
+        { "id": "midnight-a-r1", "name": "霓虹主街", "type": "黑市", "danger": 4, "tags": ["黑市", "霓虹"], "desc": "永夜里的主街，铺面的霓虹招牌拼成一片虚假的白天。" },
+        { "id": "midnight-a-r2", "name": "地下角斗场", "type": "险地", "danger": 5, "tags": ["角斗", "赌博"], "desc": "泽诺称王的地下角斗场，赔率表每小时换一次。" },
+        { "id": "midnight-a-r3", "name": "情报暗巷", "type": "市井", "danger": 4, "tags": ["情报", "暗巷"], "desc": "斯芬的「办公室」就在这附近，找她的人先要经过三道门。" }
+      ]
+    },
+    {
+      "system": "ember-east", "planet": "ember-east-a", "name": "Boundary Post", "faction": "rim", "danger": 5,
+      "climate": "荒芜尘暴，界碑在风沙里时隐时现。",
+      "economy": "探宝补给与情报倒卖。",
+      "politics": "无主之地，探险公司与佣兵团各自圈地。",
+      "culture": "探宝者的豪赌：越过界碑的人，要么发财要么喂弦流。",
+      "species": "亡命徒与探险家的杂居。",
+      "resources": "流明文物、数据晶片。",
+      "regions": [
+        { "id": "ember-east-a-r1", "name": "界碑营地", "type": "市井", "danger": 4, "tags": ["营地", "探宝"], "desc": "锈蚀的界碑与探宝者的营地，补给贵得离谱，传闻更贵。" },
+        { "id": "ember-east-a-r2", "name": "烬海前哨", "type": "军事", "danger": 5, "tags": ["前哨", "烬海"], "desc": "各国探险队的前哨，谁先出发谁先死——但总有人先出发。" },
+        { "id": "ember-east-a-r3", "name": "残骸滩", "type": "废墟", "danger": 5, "tags": ["残骸", "拾荒"], "desc": "烬海边缘的残骸滩，退「潮」时能捡到旧帝国的遗物。" }
+      ]
+    },
+    {
+      "system": "ash-shore", "planet": "ash-shore-a", "name": "Ashshore", "faction": "rim", "danger": 4,
+      "climate": "荒芜灰滩，海是黑色的，风是咸腥的。",
+      "economy": "低温舱打捞与难民安置。",
+      "politics": "难民营自治，打捞行会把持码头。",
+      "culture": "破壳日：每个从低温舱苏醒的人，都把苏醒日当生日过。",
+      "species": "无名氏们——无人知道自己是谁。",
+      "resources": "渊髓、数据晶片。",
+      "regions": [
+        { "id": "ash-shore-a-r1", "name": "打捞码头", "type": "工造", "danger": 3, "tags": ["打捞", "码头"], "desc": "低温舱像卵一样被拖上岸的码头，等待破壳。" },
+        { "id": "ash-shore-a-r2", "name": "难民营", "type": "棚户", "danger": 3, "tags": ["难民", "棚户"], "desc": "灰滩上的难民营，棚屋连成片，火堆旁人人都是故事。" },
+        { "id": "ash-shore-a-r3", "name": "朝圣滩", "type": "宗教", "danger": 3, "tags": ["朝圣", "烬海"], "desc": "望向烬海方向的滩涂，信徒跪成白色的海岸线。" }
+      ]
+    }
+  ]
+}

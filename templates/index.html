@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>星海余烬 · EMBERS OF THE STAR SEA</title>
-<link rel="stylesheet" href="/static/app.css?v=0.05">
+<link rel="stylesheet" href="/static/app.css?v=0.07.5">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✦</text></svg>">
 </head>
 <body>
@@ -20,7 +20,7 @@
     <div class="title-sigil">✦</div>
     <h1 class="title-logo">星海余烬</h1>
     <div class="title-sub">EMBERS OF THE STAR SEA</div>
-    <div class="title-meta">v<span id="title-version">0.05</span> · 余烬纪元 · 星历 <span id="title-year">3107</span></div>
+    <div class="title-meta">v<span id="title-version">0.06</span> · 余烬纪元 · 星历 <span id="title-year">3107</span></div>
     <div class="title-actions">
       <button class="btn btn-primary btn-big" id="btn-new-game">✦ 开 启 新 的 航 程</button>
       <button class="btn btn-ghost btn-big" id="btn-continue">继续征程</button>
@@ -38,7 +38,7 @@
     <div class="tb-brand" id="tb-brand" title="返回星图">
       <span class="tb-sigil">✦</span>
       <span class="tb-title">星海余烬</span>
-      <span class="tb-ver">v<span id="tb-version">0.05</span></span>
+      <span class="tb-ver">v<span id="tb-version">0.06</span></span>
     </div>
     <div class="tb-center">
       <div class="tb-chip tb-date" title="当前日期">星历 <b id="tb-year">3107</b> · 第 <b id="tb-day">1</b> 天</div>
@@ -56,7 +56,7 @@
   <nav id="sidebar">
     <button class="nav-btn active" data-view="map"><span class="nav-ico">✦</span><span class="nav-label">星图</span></button>
     <button class="nav-btn" data-view="chat"><span class="nav-ico">◈</span><span class="nav-label">对话</span></button>
-    <button class="nav-btn" data-view="characters"><span class="nav-ico">❖</span><span class="nav-label">角色</span></button>
+    <button class="nav-btn" data-view="characters"><span class="nav-ico">❖</span><span class="nav-label">情报</span></button>
     <button class="nav-btn" data-view="lorebook"><span class="nav-ico">❡</span><span class="nav-label">世界书</span></button>
     <button class="nav-btn" data-view="fleet"><span class="nav-ico">➤</span><span class="nav-label">舰队</span></button>
     <button class="nav-btn" data-view="market"><span class="nav-ico">◈</span><span class="nav-label">市场</span></button>
@@ -86,16 +86,31 @@
           </div>
         </div>
         <div class="map-legend" id="map-legend"></div>
+        <div class="map-hint" id="map-hint">滚轮缩放 · 拖动平移 · 双击进入星系 · 点击星系查看详情</div>
+        <aside id="map-system-panel" class="hidden"></aside>
         <div class="map-zoombar">
+          <button id="map-zoom-locate" title="一键定位到当前位置">⌖</button>
           <button id="map-zoom-in" title="放大">＋</button>
           <button id="map-zoom-out" title="缩小">－</button>
           <button id="map-zoom-home" title="回到当前星系">⌂</button>
           <button id="map-zoom-reset" title="全景">⛶</button>
+          <span class="zoombar-sep"></span>
+          <button id="map-toggle-lanes" class="toggle-on" title="显示/隐藏航道">航</button>
+          <button id="map-toggle-territory" class="toggle-on" title="显示/隐藏势力范围">域</button>
         </div>
-        <div id="map-tooltip" class="map-tooltip hidden"></div>
-        <div class="map-hint" id="map-hint">滚轮缩放 · 拖动平移 · 双击进入星系 · 点击星系查看详情</div>
-        <aside id="map-system-panel" class="hidden"></aside>
         <div id="map-breadcrumb" class="map-breadcrumb hidden"></div>
+        <div id="story-driver" class="story-driver">
+          <div class="sd-head">
+            <span class="sd-title">✦ 星海之主 · 总故事驱动</span>
+            <button id="sd-collapse" title="收起/展开">－</button>
+          </div>
+          <div id="sd-feed" class="sd-feed"></div>
+          <div class="sd-compose">
+            <input id="sd-input" placeholder="向星海之主描述你的行动…（Enter 发送）" autocomplete="off">
+            <button id="sd-send" class="btn btn-primary btn-xs">行动</button>
+          </div>
+          <div class="sd-foot" id="sd-foot">跃迁到达、时间推进与银河大事都会在这里播报</div>
+        </div>
       </div>
     </section>
 
@@ -103,15 +118,21 @@
     <section class="panel" id="panel-chat">
       <div id="chat-wrap">
         <header class="chat-header">
-          <div class="chat-npc-select">
-            <span class="label">与谁对话</span>
-            <select id="chat-npc-select"></select>
+          <div class="chat-header-top">
+            <span class="label">会话子面板</span>
+            <span id="chat-mode-badge" class="chat-mode-badge"></span>
           </div>
           <div class="chat-header-actions">
-            <button class="btn btn-ghost btn-sm" id="chat-clear">清空上下文</button>
+            <button class="btn btn-ghost btn-sm" id="chat-clear">清空当前会话</button>
             <button class="btn btn-ghost btn-sm" id="chat-goto-settings">AI 连接</button>
           </div>
         </header>
+        <div class="chat-tabs-wrap">
+          <div id="chat-tabs" class="chat-tabs"></div>
+          <div class="ct-fade"></div>
+        </div>
+        <div id="chat-tab-info" class="chat-tab-info"></div>
+        <div id="chat-dossier" class="chat-dossier hidden"></div>
         <div id="chat-messages"></div>
         <div class="chat-compose">
           <textarea id="chat-input" rows="1" placeholder="你的行动、台词或指令……（Enter 发送，Shift+Enter 换行）"></textarea>
@@ -121,18 +142,19 @@
       </div>
     </section>
 
-    <!-- 角色 -->
+    <!-- 角色/情报 -->
     <section class="panel" id="panel-characters">
       <div class="panel-head">
         <div>
-          <h2>星海人物志</h2>
-          <p class="sub">四十位原创角色 · 点击查看完整档案</p>
+          <h2>星海情报网</h2>
+          <p class="sub">你只知道你该知道的：身边之人、赫赫之名，与星海让你遇见的人</p>
         </div>
         <div class="head-tools">
           <input id="char-search" type="text" placeholder="搜索角色…">
           <select id="char-faction-filter"><option value="">全部势力</option></select>
         </div>
       </div>
+      <div class="char-cats" id="char-cats"></div>
       <div id="char-grid" class="char-grid"></div>
     </section>
 
@@ -214,7 +236,7 @@
 <!-- 提示浮层 -->
 <div id="toast-root"></div>
 
-<script src="/static/map.js?v=0.05"></script>
-<script src="/static/app.js?v=0.05"></script>
+<script src="/static/map.js?v=0.07"></script>
+<script src="/static/app.js?v=0.07.5"></script>
 </body>
 </html>

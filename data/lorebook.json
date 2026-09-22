@@ -6,24 +6,24 @@
   },
   "entries": [
     {
-      "id": 1, "category": "history", "title": "曦光族与曦光纪元",
-      "keys": ["曦光", "曦光族", "前史", "太古"],
-      "comment": "前史背景，曦光相关话题自动引用。",
-      "content": "曦光族是银河已知最早的智慧文明，活跃于星历前约三千五百至一千八百年。他们建造了遍布银河的「弦网」与「星门」，技术高度发达却几乎不留下文字——只有被称为「星语」的光纹铭文。曦光族对后世最大的遗产是：弦跃的物理学基础、渊髓，以及一个从未被解答的问题——他们为何消失。",
+      "id": 1, "category": "history", "title": "流明族与流明纪元",
+      "keys": ["流明", "流明族", "前史", "太古"],
+      "comment": "前史背景，流明相关话题自动引用。",
+      "content": "流明族是银河已知最早的智慧文明，活跃于星历前约三千五百至一千八百年。他们建造了遍布银河的「弦网」与「星门」，技术高度发达却几乎不留下文字——只有被称为「星语」的光纹铭文。流明族对后世最大的遗产是：弦跃的物理学基础、渊髓，以及一个从未被解答的问题——他们为何消失。",
       "constant": true, "selective": false, "insertion_order": 1, "enabled": true, "position": "before_char", "priority": 20
     },
     {
       "id": 2, "category": "history", "title": "大沉寂",
       "keys": ["大沉寂", "消失", "沉寂"],
       "comment": "前史核心事件。",
-      "content": "约星历前一千八百年，曦光族在没有任何征兆的情况下集体消失，弦网停摆、星门熄灭，文明遗迹被完整地留在原地——餐桌上还有食物，船坞里还有半成品飞船。这一时期被称为「大沉寂」，原因至今成谜，是银河学界最大的悬案。",
+      "content": "约星历前一千八百年，流明族在没有任何征兆的情况下集体消失，弦网停摆、星门熄灭，文明遗迹被完整地留在原地——餐桌上还有食物，船坞里还有半成品飞船。这一时期被称为「大沉寂」，原因至今成谜，是银河学界最大的悬案。",
       "constant": true, "selective": false, "insertion_order": 2, "enabled": true, "position": "before_char", "priority": 20
     },
     {
       "id": 3, "category": "history", "title": "首跳日与弦跃的发现",
       "keys": ["弦跃", "首跳", "星历元年", "跃迁"],
       "comment": "人类进入星海的开端。",
-      "content": "星历元年，母星联合考察队在木星轨道外的一处曦光遗迹中破译出弦跃方程，同年完成人类史上第一次超光速「弦跳」。这一天被定为「首跳日」，也是星历的起点。此后人类沿曦光族遗留的弦网向外扩张，进入大拓荒时代。",
+      "content": "星历元年，母星联合考察队在木星轨道外的一处流明遗迹中破译出弦跃方程，同年完成人类史上第一次超光速「弦跳」。这一天被定为「首跳日」，也是星历的起点。此后人类沿流明族遗留的弦网向外扩张，进入大拓荒时代。",
       "constant": true, "selective": false, "insertion_order": 3, "enabled": true, "position": "before_char", "priority": 15
     },
     {
@@ -37,28 +37,28 @@
       "id": 5, "category": "history", "title": "星冠帝国",
       "keys": ["星冠帝国", "帝国", "统一", "旧帝国"],
       "comment": "大崩落前的统一王朝。",
-      "content": "星历 812 年，拓荒者后裔卡洛斯一世在「冠冕战役」中统一了银河核心区，建立星冠帝国。帝国以赤冠为都，延续两千余年，统治弦网主干与大半已知星域。其后期封臣坐大、奴隶经济固化、宫廷奢靡，被后世史家视为大崩落的远因。",
+      "content": "星历 812 年，拓荒者后裔卡洛斯一世在「冠冕战役」中统一了银河核心区，建立星冠帝国。帝国以绯冠为都，延续两千余年，统治弦网主干与大半已知星域。其后期封臣坐大、奴隶经济固化、宫廷奢靡，被后世史家视为大崩落的远因。",
       "constant": true, "selective": false, "insertion_order": 5, "enabled": true, "position": "before_char", "priority": 15
     },
     {
       "id": 6, "category": "history", "title": "帝国黄金时代",
       "keys": ["黄金时代", "帝国鼎盛", "盛世"],
       "comment": "帝国最繁荣的时期。",
-      "content": "星历 1500 至 2400 年是星冠帝国的黄金时代：星门全数运转，弦网畅通无阻，帝国舰队巡弋四方，首都「前冠」是银河最辉煌的城市。这一时期的诗歌、星图学与舰船工艺至今仍被奉为经典，赤冠王朝的宫廷礼仪也大半沿袭自此时。",
+      "content": "星历 1500 至 2400 年是星冠帝国的黄金时代：星门全数运转，弦网畅通无阻，帝国舰队巡弋四方，首都「Fallen Crown」是银河最辉煌的城市。这一时期的诗歌、星图学与舰船工艺至今仍被奉为经典，绯冠王朝的宫廷礼仪也大半沿袭自此时。",
       "constant": false, "selective": false, "insertion_order": 6, "enabled": true, "position": "before_char", "priority": 10
     },
     {
       "id": 7, "category": "history", "title": "大崩落",
       "keys": ["大崩落", "崩落", "灾难", "圣战"],
       "comment": "世界现状的根源事件，几乎任何话题都可能牵涉。",
-      "content": "星历 2919 年，帝国中枢为打通一条「新弦」而强行过载首都星门群，引发连锁失控：弦网主干撕裂，数千艘舰船在弦流中蒸发，首都前冠连同周边十七个核心星系被能量风暴吞没。星门逐一熄灭，帝国一夜解体。史称「大崩落」。",
+      "content": "星历 2919 年，帝国中枢为打通一条「新弦」而强行过载首都星门群，引发连锁失控：弦网主干撕裂，数千艘舰船在弦流中蒸发，首都Fallen Crown连同周边十七个核心星系被能量风暴吞没。星门逐一熄灭，帝国一夜解体。史称「大崩落」。",
       "constant": true, "selective": false, "insertion_order": 7, "enabled": true, "position": "before_char", "priority": 25
     },
     {
       "id": 8, "category": "history", "title": "烬海的诞生",
       "keys": ["烬海", "坟场", "禁区", "核心废墟"],
       "comment": "银河中心禁区。",
-      "content": "大崩落中被撕碎的首都星域如今被称为「烬海」——一片横亘银河中心的死亡之域，残骸、弦流乱流与失控的曦光遗物在其中漂荡。烬海里埋着帝国末日的真相，也埋着无数寻宝者的尸骨。边缘的「朝圣滩」「灰岸」等星系成了探险、打捞与朝圣的据点。",
+      "content": "大崩落中被撕碎的首都星域如今被称为「烬海」——一片横亘银河中心的死亡之域，残骸、弦流乱流与失控的流明遗物在其中漂荡。烬海里埋着帝国末日的真相，也埋着无数寻宝者的尸骨。边缘的「Pilgrim Strand」「Ashshore」等星系成了探险、打捞与朝圣的据点。",
       "constant": true, "selective": false, "insertion_order": 8, "enabled": true, "position": "before_char", "priority": 20
     },
     {
@@ -70,121 +70,121 @@
     },
     {
       "id": 10, "category": "history", "title": "第一次诸侯战争",
-      "keys": ["诸侯战争", "第一次战争", "赤白战争"],
+      "keys": ["诸侯战争", "第一次战争", "绯奥战争"],
       "comment": "近期重大战争。",
-      "content": "星历 2991 至 2999 年，赤冠王朝以「正统讨逆」为名进攻白塔合众国，史称第一次诸侯战争。八年血战以白塔险胜告终，双方在望乡签署《望乡停战约》。此战确立了白塔的列强地位，也让赤冠恨意深种。两国的「停战」至今只是喘息的别名。",
+      "content": "星历 2991 至 2999 年，绯冠王朝以「正统讨逆」为名进攻奥瑞利安合众国，史称第一次诸侯战争。八年血战以奥瑞利安险胜告终，双方在Nostalgia签署《Nostalgia停战约》。此战确立了奥瑞利安的列强地位，也让绯冠恨意深种。两国的「停战」至今只是喘息的别名。",
       "constant": false, "selective": false, "insertion_order": 10, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 11, "category": "history", "title": "白塔宪章",
-      "keys": ["白塔宪章", "宪章", "议会", "共和"],
-      "comment": "白塔立国文件。",
-      "content": "大崩落后的重建世代在织光座签署《白塔宪章》，宣告「知识公有、思想自由、权力制衡」。宪章确立了议会共和制与专利制度，也确立了白塔与赤冠的根本分歧：一个相信制度，一个相信血统。",
+      "id": 11, "category": "history", "title": "奥瑞利安宪章",
+      "keys": ["奥瑞利安宪章", "宪章", "议会", "共和"],
+      "comment": "奥瑞利安立国文件。",
+      "content": "大崩落后的重建世代在Lumina签署《奥瑞利安宪章》，宣告「知识公有、思想自由、权力制衡」。宪章确立了议会共和制与专利制度，也确立了奥瑞利安与绯冠的根本分歧：一个相信制度，一个相信血统。",
       "constant": false, "selective": false, "insertion_order": 11, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 12, "category": "history", "title": "碎镣大起义",
-      "keys": ["碎镣", "起义", "解放", "革命"],
-      "comment": "碎镣同盟的立国之战。",
-      "content": "星历 3058 年，金穗庄园的奴隶索恩率整条奴隶运输船起义，风暴席卷赤冠与蓝潮的产粮星域，史称「碎镣大起义」。起义者最终在破晓星站稳脚跟，成立碎镣同盟。至今，他们的解放舰队仍在袭击各处的奴隶航线。",
+      "id": 12, "category": "history", "title": "破枷大起义",
+      "keys": ["破枷", "起义", "解放", "革命"],
+      "comment": "破枷同盟的立国之战。",
+      "content": "星历 3058 年，Goldenfield庄园的奴隶索恩率整条奴隶运输船起义，风暴席卷绯冠与蓝潮的产粮星域，史称「破枷大起义」。起义者最终在Dawnbreak站稳脚跟，成立破枷同盟。至今，他们的解放舰队仍在袭击各处的奴隶航线。",
       "constant": false, "selective": false, "insertion_order": 12, "enabled": true, "position": "before_char", "priority": 12
     },
     {
       "id": 13, "category": "history", "title": "灰潮立约",
       "keys": ["灰潮", "立约", "海盗", "灰潮法则"],
       "comment": "灰潮的联合史。",
-      "content": "星历 3069 年，各掠团在骸骨港订立「灰潮立约」：强者为尊、抢掠为业、出卖为耻。这份只有三条的盟约结束了海盗之间三十年的混战，让灰潮成为一支令航线颤抖的联合力量。",
+      "content": "星历 3069 年，各掠团在Boneport订立「灰潮立约」：强者为尊、抢掠为业、出卖为耻。这份只有三条的盟约结束了海盗之间三十年的混战，让灰潮成为一支令航线颤抖的联合力量。",
       "constant": false, "selective": false, "insertion_order": 13, "enabled": true, "position": "before_char", "priority": 12
     },
     {
       "id": 14, "category": "history", "title": "星历 3107 年局势",
       "keys": ["3107", "今日", "局势", "当前"],
       "comment": "开局时的银河态势。",
-      "content": "星历 3107 年：赤冠与白塔的停战期已到第十六个年头，边境摩擦不断；蓝潮的护航费率连年上涨；锻星教团宣布发现「新弦」；漂泊舰队的归途号驶向从未有人去过的星域；碎镣同盟的解放行动让奴隶价格暴涨三成；而烬海深处的弦流，正一年比一年安静。",
+      "content": "星历 3107 年：绯冠与奥瑞利安的停战期已到第十六个年头，边境摩擦不断；蓝潮的护航费率连年上涨；赫菲斯托斯教团宣布发现「新弦」；漂泊舰队的Homebound驶向从未有人去过的星域；破枷同盟的解放行动让奴隶价格暴涨三成；而烬海深处的弦流，正一年比一年安静。",
       "constant": true, "selective": false, "insertion_order": 14, "enabled": true, "position": "before_char", "priority": 22
     },
     {
-      "id": 15, "category": "faction", "title": "白塔合众国",
-      "keys": ["白塔", "合众国", "议会", "心网"],
-      "comment": "势力档案：白塔。",
-      "content": "白塔合众国：议会共和制科技强国，首都织光座。掌控心网、弦跃专利与最完整的曦光研究体系，以「知识公有」立国。政治上主张中立仲裁，军事上拥有精锐的快反舰队。弱点在于对数据的依赖与对边境的忽视——白塔的安全建立在它永远领先一步的假设上。",
+      "id": 15, "category": "faction", "title": "奥瑞利安合众国",
+      "keys": ["奥瑞利安", "合众国", "议会", "心网"],
+      "comment": "势力档案：奥瑞利安。",
+      "content": "奥瑞利安合众国：议会共和制科技强国，首都Lumina。掌控心网、弦跃专利与最完整的流明研究体系，以「知识公有」立国。政治上主张中立仲裁，军事上拥有精锐的快反舰队。弱点在于对数据的依赖与对边境的忽视——奥瑞利安的安全建立在它永远领先一步的假设上。",
       "constant": true, "selective": false, "insertion_order": 15, "enabled": true, "position": "before_char", "priority": 22
     },
     {
-      "id": 16, "category": "faction", "title": "赤冠王朝",
-      "keys": ["赤冠", "王朝", "皇帝", "封臣"],
-      "comment": "势力档案：赤冠。",
-      "content": "赤冠王朝：自命星冠帝国正统的封建王朝，首都赤冠星系。保留完整封臣制、骑士团与庄园奴隶制，军事强大、礼仪森严。皇帝罗德里戈·焰庭三世锐意重整帝国，但诸侯各怀心思，王朝的剑锋总被自己人的锁链牵绊。",
+      "id": 16, "category": "faction", "title": "绯冠王朝",
+      "keys": ["绯冠", "王朝", "皇帝", "封臣"],
+      "comment": "势力档案：绯冠。",
+      "content": "绯冠王朝：自命星冠帝国正统的封建王朝，首都绯冠星系。保留完整封臣制、骑士团与庄园奴隶制，军事强大、礼仪森严。皇帝罗德里戈·Flamecourt三世锐意重整帝国，但诸侯各怀心思，王朝的剑锋总被自己人的锁链牵绊。",
       "constant": true, "selective": false, "insertion_order": 16, "enabled": true, "position": "before_char", "priority": 22
     },
     {
       "id": 17, "category": "faction", "title": "蓝潮商盟",
       "keys": ["蓝潮", "商盟", "商号", "信用"],
       "comment": "势力档案：蓝潮。",
-      "content": "蓝潮商盟：七十二家商号组成的商业联邦，首都潮汐港。掌控银河最密集的贸易航道与「蓝潮信用」清算体系，信奉「信用即王权」。其护航舰队规模不逊于任何强国，政治上保持中立——但它的中立是按吨计价、按月结算的。",
+      "content": "蓝潮商盟：七十二家商号组成的商业联邦，首都Tideport。掌控银河最密集的贸易航道与「蓝潮信用」清算体系，信奉「信用即王权」。其护航舰队规模不逊于任何强国，政治上保持中立——但它的中立是按吨计价、按月结算的。",
       "constant": true, "selective": false, "insertion_order": 17, "enabled": true, "position": "before_char", "priority": 22
     },
     {
-      "id": 18, "category": "faction", "title": "锻星教团",
-      "keys": ["锻星", "教团", "熔炉", "义体"],
-      "comment": "势力档案：锻星。",
-      "content": "锻星教团：崇拜恒星熔炼巨构「大熔炉」的神权技术教团，圣地万机熔炉。教士即工程师，垄断义体制造与舰船重工。教团律法冷酷，以「淬炼」之名淘汰弱者，但它的工厂养活着半个银河的工业。",
+      "id": 18, "category": "faction", "title": "赫菲斯托斯教团",
+      "keys": ["赫菲斯托斯", "教团", "熔炉", "义体"],
+      "comment": "势力档案：赫菲斯托斯。",
+      "content": "赫菲斯托斯教团：崇拜恒星熔炼巨构「大熔炉」的神权技术教团，圣地Vulcan's Hearth。教士即工程师，垄断义体制造与舰船重工。教团律法冷酷，以「淬炼」之名淘汰弱者，但它的工厂养活着半个银河的工业。",
       "constant": true, "selective": false, "insertion_order": 18, "enabled": true, "position": "before_char", "priority": 22
     },
     {
       "id": 19, "category": "faction", "title": "漂泊舰队",
-      "keys": ["漂泊", "舰队", "归途号", "游牧"],
+      "keys": ["漂泊", "舰队", "Homebound", "游牧"],
       "comment": "势力档案：漂泊。",
-      "content": "漂泊舰队：以大崩落时滞留在航线上的船队结成的移动国度，千艘巨舰世代漂流，母舰为传说中的「归途号」。舰队人人皆可入伙，是逃亡者与难民的天堂。他们世代寻找传说中仍完好的「回家之门」。",
+      "content": "漂泊舰队：以大崩落时滞留在航线上的船队结成的移动国度，千艘巨舰世代漂流，母舰为传说中的「Homebound」。舰队人人皆可入伙，是逃亡者与难民的天堂。他们世代寻找传说中仍完好的「回家之门」。",
       "constant": true, "selective": false, "insertion_order": 19, "enabled": true, "position": "before_char", "priority": 22
     },
     {
-      "id": 20, "category": "faction", "title": "碎镣同盟",
-      "keys": ["碎镣", "同盟", "解放", "自由"],
-      "comment": "势力档案：碎镣。",
-      "content": "碎镣同盟：由解放奴隶组成的革命政权，首都破晓星。以游击舰队袭击奴隶航线、解放庄园，宣称「人人生而自由」。被诸强斥为恐怖分子，却在星海底层拥有崇高声望。它的舰队老旧，但它的理想让每个镣铐下的灵魂心跳加速。",
+      "id": 20, "category": "faction", "title": "破枷同盟",
+      "keys": ["破枷", "同盟", "解放", "自由"],
+      "comment": "势力档案：破枷。",
+      "content": "破枷同盟：由解放奴隶组成的革命政权，首都Dawnbreak。以游击舰队袭击奴隶航线、解放庄园，宣称「人人生而自由」。被诸强斥为恐怖分子，却在星海底层拥有崇高声望。它的舰队老旧，但它的理想让每个镣铐下的灵魂心跳加速。",
       "constant": true, "selective": false, "insertion_order": 20, "enabled": true, "position": "before_char", "priority": 22
     },
     {
       "id": 21, "category": "faction", "title": "灰潮掠夺者",
       "keys": ["灰潮", "掠夺者", "海盗", "灰王"],
       "comment": "势力档案：灰潮。",
-      "content": "灰潮掠夺者：以「灰潮立约」维系的掠团联合，老巢骸骨港。控制黑市、走私与赎金经济，是航道上最凶悍的狼群。头目卡赞·灰王正试图让灰潮从海盗升级为「势力」——这让各大国的外交通道都悄悄加宽了一寸。",
+      "content": "灰潮掠夺者：以「灰潮立约」维系的掠团联合，老巢Boneport。控制黑市、走私与赎金经济，是航道上最凶悍的狼群。头目卡赞·灰王正试图让灰潮从海盗升级为「势力」——这让各大国的外交通道都悄悄加宽了一寸。",
       "constant": true, "selective": false, "insertion_order": 21, "enabled": true, "position": "before_char", "priority": 22
     },
     {
-      "id": 22, "category": "faction", "title": "曦光圣所",
-      "keys": ["曦光圣所", "圣所", "守门人", "曦回"],
-      "comment": "隐藏势力档案：曦光。",
-      "content": "曦光圣所：隐世教团，圣地为星图之外的「曦回圣殿」。成员稀少而神秘，能启动他人无法操作的曦光遗物，宣称守护曦光族最后的遗言。他们注视弦网的方式，至今无人能够解释。",
+      "id": 22, "category": "faction", "title": "流明圣所",
+      "keys": ["流明圣所", "圣所", "守门人", "曦回"],
+      "comment": "隐藏势力档案：流明。",
+      "content": "流明圣所：隐世教团，圣地为星图之外的「Lumen Sanctum」。成员稀少而神秘，能启动他人无法操作的流明遗物，宣称守护流明族最后的遗言。他们注视弦网的方式，至今无人能够解释。",
       "constant": true, "selective": false, "insertion_order": 22, "enabled": true, "position": "before_char", "priority": 18
     },
     {
       "id": 23, "category": "faction", "title": "无主星域",
       "keys": ["无主星域", "边缘", "自由", "中立"],
       "comment": "边缘地带背景。",
-      "content": "无主星域是不属于任何势力的边缘地带，散布着十字路口、午夜、拾荒者天堂等自由港。这里没有法律，只有规矩；没有国旗，只有船旗。赏金猎人、信使、走私者与梦想家在此混居，是星海最危险也最自由的地方。",
+      "content": "无主星域是不属于任何势力的边缘地带，散布着Crossroads、Midnight、Scavport等Freeport。这里没有法律，只有规矩；没有国旗，只有船旗。赏金猎人、信使、走私者与梦想家在此混居，是星海最危险也最自由的地方。",
       "constant": true, "selective": false, "insertion_order": 23, "enabled": true, "position": "before_char", "priority": 18
     },
     {
       "id": 24, "category": "politics", "title": "封臣制与诸侯",
       "keys": ["封臣", "诸侯", "领地", "效忠"],
-      "comment": "赤冠政治制度。",
-      "content": "赤冠王朝沿用帝国晚期的封臣制：七十二侯领向皇帝效忠，各领自治其地、自养其兵。皇帝以「授封、联姻、军费」三条锁链驾驭诸侯。这套制度让王朝迅速恢复了秩序，也让每一次皇权更迭都变成一场诸侯的赌局。",
+      "comment": "绯冠政治制度。",
+      "content": "绯冠王朝沿用帝国晚期的封臣制：七十二侯领向皇帝效忠，各领自治其地、自养其兵。皇帝以「授封、联姻、军费」三条锁链驾驭诸侯。这套制度让王朝迅速恢复了秩序，也让每一次皇权更迭都变成一场诸侯的赌局。",
       "constant": false, "selective": false, "insertion_order": 24, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 25, "category": "politics", "title": "星区议会",
       "keys": ["星区议会", "仲裁", "中立", "调解"],
       "comment": "各国间的仲裁机制。",
-      "content": "星区议会是余烬纪元仅存的多边仲裁机构，会址设在无主星域的十字路口。各国代表在此调解边境纠纷、交换俘虏、商议航道安全。议会没有军队，权威全靠与会者的信用——因此它的决议往往只在「不涉及重大利益」时有效。",
+      "content": "星区议会是余烬纪元仅存的多边仲裁机构，会址设在无主星域的Crossroads。各国代表在此调解边境纠纷、交换俘虏、商议航道安全。议会没有军队，权威全靠与会者的信用——因此它的决议往往只在「不涉及重大利益」时有效。",
       "constant": false, "selective": false, "insertion_order": 25, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 26, "category": "politics", "title": "战争与外交格局",
       "keys": ["战争", "外交", "结盟", "格局"],
       "comment": "当前国际关系概况。",
-      "content": "当前格局：赤冠与白塔互为死敌，停战多年而摩擦不断；蓝潮对双方两头下注；锻星教团向所有买家出售武器，唯独不卖给碎镣同盟；漂泊舰队保持中立却收留各国的逃亡者；灰潮是所有航线的公敌，也是黑市的共主。各国之间没有永恒的盟友，只有永恒的价格。",
+      "content": "当前格局：绯冠与奥瑞利安互为死敌，停战多年而摩擦不断；蓝潮对双方两头下注；赫菲斯托斯教团向所有买家出售武器，唯独不卖给破枷同盟；漂泊舰队保持中立却收留各国的逃亡者；灰潮是所有航线的公敌，也是黑市的共主。各国之间没有永恒的盟友，只有永恒的价格。",
       "constant": true, "selective": false, "insertion_order": 26, "enabled": true, "position": "before_char", "priority": 18
     },
     {
@@ -198,7 +198,7 @@
       "id": 28, "category": "politics", "title": "奴隶制与契约工",
       "keys": ["奴隶", "契约工", "奴工", "庄园"],
       "comment": "星海的劳动力制度。",
-      "content": "赤冠王朝保留着完整的庄园奴隶制；蓝潮商盟则用「契约工」粉饰同样的实质——一纸长期合同把人锁进码头与矿场。白塔明令禁止奴隶制却默许「劳务外包」，碎镣同盟则以彻底废除一切形式的人身为货而战。奴隶贸易是星海最血腥也最赚钱的行当之一。",
+      "content": "绯冠王朝保留着完整的庄园奴隶制；蓝潮商盟则用「契约工」粉饰同样的实质——一纸长期合同把人锁进码头与矿场。奥瑞利安明令禁止奴隶制却默许「劳务外包」，破枷同盟则以彻底废除一切形式的人身为货而战。奴隶贸易是星海最血腥也最赚钱的行当之一。",
       "constant": true, "selective": false, "insertion_order": 28, "enabled": true, "position": "before_char", "priority": 18
     },
     {
@@ -211,28 +211,28 @@
     {
       "id": 30, "category": "politics", "title": "帝国宣称权",
       "keys": ["宣称", "正统", "皇位", "复辟"],
-      "comment": "赤冠的合法性叙事。",
-      "content": "赤冠王朝的合法性建立在「帝国宣称权」上：焰庭一族自称星冠帝国末代皇室的直系血脉，永燃王座之火即帝国正统的象征。白塔学者反复质疑其族谱真伪，但质疑本身在赤冠境内属于叛国罪。",
+      "comment": "绯冠的合法性叙事。",
+      "content": "绯冠王朝的合法性建立在「帝国宣称权」上：Flamecourt一族自称星冠帝国末代皇室的直系血脉，永燃王座之火即帝国正统的象征。奥瑞利安学者反复质疑其族谱真伪，但质疑本身在绯冠境内属于叛国罪。",
       "constant": false, "selective": false, "insertion_order": 30, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 31, "category": "culture", "title": "航道语",
       "keys": ["航道语", "语言", "通用语", "黑话"],
       "comment": "通用语言设定。",
-      "content": "航道语是余烬纪元的通用语，源自帝国晚期的商贸行话，混入了白塔术语、灰潮黑话与漂泊舰队的水手腔。正式的航道语冗长礼貌，码头版则短促粗粝。下层人常以「切口」识别彼此的出身与阵营。",
+      "content": "航道语是余烬纪元的通用语，源自帝国晚期的商贸行话，混入了奥瑞利安术语、灰潮黑话与漂泊舰队的水手腔。正式的航道语冗长礼貌，码头版则短促粗粝。下层人常以「切口」识别彼此的出身与阵营。",
       "constant": true, "selective": false, "insertion_order": 31, "enabled": true, "position": "before_char", "priority": 15
     },
     {
-      "id": 32, "category": "culture", "title": "曦光教",
-      "keys": ["曦光教", "宗教", "信仰", "朝圣"],
+      "id": 32, "category": "culture", "title": "流明教",
+      "keys": ["流明教", "宗教", "信仰", "朝圣"],
       "comment": "最大宗教。",
-      "content": "曦光教是余烬纪元信徒最多的宗教，教义认为曦光族是「先行者」，大沉寂是他们对人类的试炼，而人类终将点亮自己的光。教会不设神像，信徒朝拜「光之门」——烬海边缘的朝圣滩是其圣地。各国对教会态度不一：赤冠尊其为国教，白塔则冷眼旁观。",
+      "content": "流明教是余烬纪元信徒最多的宗教，教义认为流明族是「先行者」，大沉寂是他们对人类的试炼，而人类终将点亮自己的光。教会不设神像，信徒朝拜「光之门」——烬海边缘的Pilgrim Strand是其圣地。各国对教会态度不一：绯冠尊其为国教，奥瑞利安则冷眼旁观。",
       "constant": true, "selective": false, "insertion_order": 32, "enabled": true, "position": "before_char", "priority": 15
     },
     {
       "id": 33, "category": "culture", "title": "锻炉信仰",
       "keys": ["锻炉", "信仰", "铸造", "淬炼"],
-      "comment": "锻星教团宗教。",
+      "comment": "赫菲斯托斯教团宗教。",
       "content": "锻炉信仰崇拜「大熔炉」，认为宇宙是一间锻炉，万物皆需淬炼——痛苦是锤，时间是火，成品是更完美的形态。信徒以接受义体改造为「入炉」，以被淘汰为「回炉」。教团教士的祷词是一张张技术图纸。",
       "constant": false, "selective": false, "insertion_order": 33, "enabled": true, "position": "before_char", "priority": 10
     },
@@ -254,21 +254,21 @@
       "id": 36, "category": "culture", "title": "大沉寂日",
       "keys": ["大沉寂日", "节日", "祭日", "哀悼"],
       "comment": "重要节日。",
-      "content": "每年大崩落周年之日为大沉寂日，星海各地熄灭主灯一分钟，为逝者与曦光族默哀。帝国旧贵族会在这一日穿黑、禁宴，而民间则流传着「沉寂日许愿特别灵」的说法，导致黑市蜡烛脱销。",
+      "content": "每年大崩落周年之日为大沉寂日，星海各地熄灭主灯一分钟，为逝者与流明族默哀。帝国旧贵族会在这一日穿黑、禁宴，而民间则流传着「沉寂日许愿特别灵」的说法，导致黑市蜡烛脱销。",
       "constant": false, "selective": false, "insertion_order": 36, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 37, "category": "culture", "title": "首跳日",
       "keys": ["首跳日", "节日", "庆典", "烟花"],
       "comment": "重要节日。",
-      "content": "星历新年又称首跳日，纪念人类第一次弦跳。各地以舰船列阵「跳灯」——让引擎短暂过载喷出光焰，如烟花般照亮星港。白塔会在这一天免费开放心网民用频道，灰潮则会「休战一日」，劫掠者与商船共享一口酒。",
+      "content": "星历新年又称首跳日，纪念人类第一次弦跳。各地以舰船列阵「跳灯」——让引擎短暂过载喷出光焰，如烟花般照亮星港。奥瑞利安会在这一天免费开放心网民用频道，灰潮则会「休战一日」，劫掠者与商船共享一口酒。",
       "constant": false, "selective": false, "insertion_order": 37, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 38, "category": "culture", "title": "贵族礼仪",
       "keys": ["贵族", "礼仪", "宫廷", "礼节"],
-      "comment": "赤冠上层社交规范。",
-      "content": "赤冠贵族礼仪繁琐至极：觐见皇帝的跪拜幅度、餐具的摆放角度、佩剑的悬挂高度皆有定制。失礼者轻则罚金，重则辱及家门。讽刺的是，最懂这套礼仪的人往往在用它杀人——宫廷里的每一句寒暄都是剑鞘里的刀。",
+      "comment": "绯冠上层社交规范。",
+      "content": "绯冠贵族礼仪繁琐至极：觐见皇帝的跪拜幅度、餐具的摆放角度、佩剑的悬挂高度皆有定制。失礼者轻则罚金，重则辱及家门。讽刺的是，最懂这套礼仪的人往往在用它杀人——宫廷里的每一句寒暄都是剑鞘里的刀。",
       "constant": false, "selective": false, "insertion_order": 38, "enabled": true, "position": "before_char", "priority": 8
     },
     {
@@ -289,35 +289,35 @@
       "id": 41, "category": "economy", "title": "渊髓经济",
       "keys": ["渊髓", "燃料", "能源", "硬通货"],
       "comment": "经济基石。",
-      "content": "渊髓是弦跃引擎的燃料，也是星海事实上的硬通货。它以晶块计，从曦光遗迹与深空矿脉中开采，储量决定国力。渊髓价格每波动一成，航线上的每张餐桌都会震动。控制渊髓，就控制星海的心跳。",
+      "content": "渊髓是弦跃引擎的燃料，也是星海事实上的硬通货。它以晶块计，从流明遗迹与深空矿脉中开采，储量决定国力。渊髓价格每波动一成，航线上的每张餐桌都会震动。控制渊髓，就控制星海的心跳。",
       "constant": true, "selective": false, "insertion_order": 41, "enabled": true, "position": "before_char", "priority": 18
     },
     {
       "id": 42, "category": "economy", "title": "蓝潮信用体系",
       "keys": ["蓝潮信用", "信用", "清算", "贷款"],
       "comment": "金融体系。",
-      "content": "蓝潮商盟的「信用体系」是余烬纪元的金融中枢：每笔大额交易经潮汐港清算，个人与商号的信用额度随履约记录浮动。信用破产者会被全盟拉黑，而顶级信用者甚至能凭一句话调动一支护航舰队。",
+      "content": "蓝潮商盟的「信用体系」是余烬纪元的金融中枢：每笔大额交易经Tideport清算，个人与商号的信用额度随履约记录浮动。信用破产者会被全盟拉黑，而顶级信用者甚至能凭一句话调动一支护航舰队。",
       "constant": false, "selective": false, "insertion_order": 42, "enabled": true, "position": "before_char", "priority": 10
     },
     {
       "id": 43, "category": "economy", "title": "航道税与过路费",
       "keys": ["航道税", "过路费", "关税", "通行"],
       "comment": "贸易成本。",
-      "content": "各国对过境商船征收航道税，税率随关系起伏：赤冠对白塔旗船课以重税，蓝潮则对盟内商号全免。无主星域没有税，但有「保护费」——不交给当地势力，就交给运气。",
+      "content": "各国对过境商船征收航道税，税率随关系起伏：绯冠对奥瑞利安旗船课以重税，蓝潮则对盟内商号全免。无主星域没有税，但有「保护费」——不交给当地势力，就交给运气。",
       "constant": false, "selective": false, "insertion_order": 43, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 44, "category": "economy", "title": "黑市经济",
       "keys": ["黑市", "走私", "赃物", "地下"],
       "comment": "灰色经济。",
-      "content": "黑市是星海经济的地下河：曦光文物、军用武器、违禁义体、伪造身份乃至奴隶合同都在此流通。午夜行星是黑市之都，灰潮是最大的供应商，蓝潮则是最大的洗钱庄家——这层关系人人都知道，人人都假装不知道。",
+      "content": "黑市是星海经济的地下河：流明文物、军用武器、违禁义体、伪造身份乃至奴隶合同都在此流通。Midnight行星是黑市之都，灰潮是最大的供应商，蓝潮则是最大的洗钱庄家——这层关系人人都知道，人人都假装不知道。",
       "constant": true, "selective": false, "insertion_order": 44, "enabled": true, "position": "before_char", "priority": 15
     },
     {
       "id": 45, "category": "economy", "title": "债务奴隶",
       "keys": ["债务", "债奴", "欠债", "卖身"],
       "comment": "经济压迫形式。",
-      "content": "在蓝潮与赤冠，还不起债的人会沦为债务奴隶：以劳役抵债，利息滚雪球，合同可以无限续签——事实上几乎没有人能从债里爬出来。商盟的「信用即王权」的另一面，是码头深处的债奴营。",
+      "content": "在蓝潮与绯冠，还不起债的人会沦为债务奴隶：以劳役抵债，利息滚雪球，合同可以无限续签——事实上几乎没有人能从债里爬出来。商盟的「信用即王权」的另一面，是码头深处的债奴营。",
       "constant": false, "selective": false, "insertion_order": 45, "enabled": true, "position": "before_char", "priority": 10
     },
     {
@@ -331,63 +331,63 @@
       "id": 47, "category": "economy", "title": "采矿业",
       "keys": ["采矿", "矿业", "矿工", "矿脉"],
       "comment": "实体产业。",
-      "content": "采矿是星海实体经济的支柱：小行星带的稀土、冰环的水冰、深空的渊髓矿脉。矿工是星海最苦的行当——赤冠用奴隶，蓝潮用契约工，锻星用「被淘汰者」，唯有漂泊舰队给矿工分股份。",
+      "content": "采矿是星海实体经济的支柱：小行星带的稀土、冰环的水冰、深空的渊髓矿脉。矿工是星海最苦的行当——绯冠用奴隶，蓝潮用契约工，赫菲斯托斯用「被淘汰者」，唯有漂泊舰队给矿工分股份。",
       "constant": false, "selective": false, "insertion_order": 47, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 48, "category": "economy", "title": "拾荒业",
       "keys": ["拾荒", "回收", "垃圾", "行会"],
       "comment": "底层产业。",
-      "content": "大崩落留下无数残骸，拾荒业应运而生：拾荒者在垃圾带、弃船海与烬海边缘打捞一切还能换钱的东西。拾荒者行会以「万物皆有第二次生命」为信条，是底层人最体面的出路之一，也是无数冒险故事的开头。",
+      "content": "大崩落留下无数残骸，拾荒业应运而生：拾荒者在垃圾带、Graveyard Sea与烬海边缘打捞一切还能换钱的东西。拾荒者行会以「万物皆有第二次生命」为信条，是底层人最体面的出路之一，也是无数冒险故事的开头。",
       "constant": false, "selective": false, "insertion_order": 48, "enabled": true, "position": "before_char", "priority": 8
     },
     {
       "id": 49, "category": "tech", "title": "弦跃引擎",
       "keys": ["弦跃", "引擎", "跃迁", "超光速"],
       "comment": "核心技术。",
-      "content": "弦跃引擎是星海航行的基础：消耗渊髓，让舰船沿宇宙弦进行超光速跳跃。旧式引擎需沿稳定弦道（航道）航行，跳得越远风险越高；白塔的新式引擎则能在弱弦区短跳，代价是成倍的燃料。弦跃的瞬间，乘员会听见一声类似琴弦的低鸣——那是弦流擦过船壳的声音。",
+      "content": "弦跃引擎是星海航行的基础：消耗渊髓，让舰船沿宇宙弦进行超光速跳跃。旧式引擎需沿稳定弦道（航道）航行，跳得越远风险越高；奥瑞利安的新式引擎则能在弱弦区短跳，代价是成倍的燃料。弦跃的瞬间，乘员会听见一声类似琴弦的低鸣——那是弦流擦过船壳的声音。",
       "constant": true, "selective": false, "insertion_order": 49, "enabled": true, "position": "before_char", "priority": 18
     },
     {
       "id": 50, "category": "tech", "title": "弦网与航道",
       "keys": ["弦网", "航道", "航线", "弦道"],
       "comment": "星际交通网络。",
-      "content": "弦网是曦光族加固过的宇宙弦网络，如河道般贯穿银河。大崩落撕裂了弦网主干，如今只有支离破碎的「航道」可安全通行：星图上的每一段航线都经过探测与标定，偏离航道等于把命交给概率。",
+      "content": "弦网是流明族加固过的宇宙弦网络，如河道般贯穿银河。大崩落撕裂了弦网主干，如今只有支离破碎的「航道」可安全通行：星图上的每一段航线都经过探测与标定，偏离航道等于把命交给概率。",
       "constant": true, "selective": false, "insertion_order": 50, "enabled": true, "position": "before_char", "priority": 18
     },
     {
       "id": 51, "category": "tech", "title": "星门",
       "keys": ["星门", "传送", "巨构", "门"],
-      "comment": "曦光遗产交通设施。",
-      "content": "星门是曦光族建造的巨型传送设施，可将舰船瞬间送往数千光年外的另一座星门。大崩落后绝大多数星门已熄灭，残存的几座被各国视为命脉：白潮之门、赤锻之门、归乡之门与永夜之门。星门启动需额外消耗渊髓，且「门」偶尔会自己亮起来——那时的目的地无人知晓。",
+      "comment": "流明遗产交通设施。",
+      "content": "星门是流明族建造的巨型传送设施，可将舰船瞬间送往数千光年外的另一座星门。大崩落后绝大多数星门已熄灭，残存的几座被各国视为命脉：白潮之门、赤锻之门、归乡之门与永夜之门。星门启动需额外消耗渊髓，且「门」偶尔会自己亮起来——那时的目的地无人知晓。",
       "constant": true, "selective": false, "insertion_order": 51, "enabled": true, "position": "before_char", "priority": 18
     },
     {
       "id": 52, "category": "tech", "title": "心网",
       "keys": ["心网", "网络", "通讯", "歌者"],
-      "comment": "白塔通讯网络。",
-      "content": "心网是白塔运营的星际通讯网络，通过弦流中继传递数据，让银河的头脑保持联系。心网偶有「躁动」——信息流如心跳般紊乱，需由「心网歌者」用歌声安抚。白塔对心网的垄断，是它最锋利的剑，也是最柔软的腹。",
+      "comment": "奥瑞利安通讯网络。",
+      "content": "心网是奥瑞利安运营的星际通讯网络，通过弦流中继传递数据，让银河的头脑保持联系。心网偶有「躁动」——信息流如心跳般紊乱，需由「心网歌者」用歌声安抚。奥瑞利安对心网的垄断，是它最锋利的剑，也是最柔软的腹。",
       "constant": true, "selective": false, "insertion_order": 52, "enabled": true, "position": "before_char", "priority": 15
     },
     {
       "id": 53, "category": "tech", "title": "义体技术",
       "keys": ["义体", "改造", "机械", "排异"],
       "comment": "人体改造技术。",
-      "content": "义体技术以锻星教团为尊：从义眼、义肢到整条神经脊柱，皆可替换强化。教团把改造视为「淬炼」，白塔把改造视为医疗，赤冠贵族则只做「看不见的改造」。排异反应是永恒的风险——不是所有灵魂都装得进钢铁。",
+      "content": "义体技术以赫菲斯托斯教团为尊：从义眼、义肢到整条神经脊柱，皆可替换强化。教团把改造视为「淬炼」，奥瑞利安把改造视为医疗，绯冠贵族则只做「看不见的改造」。排异反应是永恒的风险——不是所有灵魂都装得进钢铁。",
       "constant": true, "selective": false, "insertion_order": 53, "enabled": true, "position": "before_char", "priority": 15
     },
     {
       "id": 54, "category": "tech", "title": "基因雕琢",
       "keys": ["基因", "雕琢", "改造婴儿", "强化"],
       "comment": "基因改造技术。",
-      "content": "基因雕琢在受孕前修正胚胎基因，可定制容貌、体质与天赋，价格昂贵，是上层阶级的「血统投资」。赤冠贵族与蓝潮富豪皆以雕琢为常态，白塔立法限制其非医疗用途，黑市则有廉价而危险的「野雕」——失败品往往被丢弃，其中一些活了下来。",
+      "content": "基因雕琢在受孕前修正胚胎基因，可定制容貌、体质与天赋，价格昂贵，是上层阶级的「血统投资」。绯冠贵族与蓝潮富豪皆以雕琢为常态，奥瑞利安立法限制其非医疗用途，黑市则有廉价而危险的「野雕」——失败品往往被丢弃，其中一些活了下来。",
       "constant": false, "selective": false, "insertion_order": 54, "enabled": true, "position": "before_char", "priority": 10
     },
     {
       "id": 55, "category": "tech", "title": "护盾与舰炮",
       "keys": ["护盾", "舰炮", "武器", "战舰"],
       "comment": "舰载武备。",
-      "content": "军舰标配能量护盾与磁轨/粒子舰炮：护盾耗尽前舰体无损，耗尽后每一炮都是真伤。白塔精于护盾与点防御，锻星精于重炮与装甲，赤冠精于登舰战——它的骑士团擅长在接舷的刹那决定胜负。",
+      "content": "军舰标配能量护盾与磁轨/粒子舰炮：护盾耗尽前舰体无损，耗尽后每一炮都是真伤。奥瑞利安精于护盾与点防御，赫菲斯托斯精于重炮与装甲，绯冠精于登舰战——它的骑士团擅长在接舷的刹那决定胜负。",
       "constant": false, "selective": false, "insertion_order": 55, "enabled": true, "position": "before_char", "priority": 10
     },
     {
@@ -405,24 +405,24 @@
       "constant": false, "selective": false, "insertion_order": 57, "enabled": true, "position": "before_char", "priority": 8
     },
     {
-      "id": 58, "category": "tech", "title": "曦光遗物",
+      "id": 58, "category": "tech", "title": "流明遗物",
       "keys": ["遗物", "文物", "上古造物", "遗迹"],
       "comment": "考古与收藏核心。",
-      "content": "曦光遗物是大沉寂前文明的造物：从会自己发热的金属碎片到完整的星门。多数遗物无法被复制、无法被理解，只能被「使用」或「敬畏」。黑市上，一件真品曦光文物能换一支舰队；而某些遗物，会在深夜自己亮起来。",
+      "content": "流明遗物是大沉寂前文明的造物：从会自己发热的金属碎片到完整的星门。多数遗物无法被复制、无法被理解，只能被「使用」或「敬畏」。黑市上，一件真品流明文物能换一支舰队；而某些遗物，会在深夜自己亮起来。",
       "constant": true, "selective": false, "insertion_order": 58, "enabled": true, "position": "before_char", "priority": 18
     },
     {
       "id": 59, "category": "tech", "title": "星语",
       "keys": ["星语", "铭文", "破译", "光纹"],
-      "comment": "曦光文字。",
-      "content": "星语是曦光族的光纹铭文，无固定载体——它们悬浮、流动、随观测者改变排列。人类对星语的破译率不足百分之一，已知的词句多与「门」「光」「归来」有关。白塔考古学社悬赏任何新破译的星语词汇，曦光圣所则说：读得太多，光会先找到你。",
+      "comment": "流明文字。",
+      "content": "星语是流明族的光纹铭文，无固定载体——它们悬浮、流动、随观测者改变排列。人类对星语的破译率不足百分之一，已知的词句多与「门」「光」「归来」有关。奥瑞利安考古学社悬赏任何新破译的星语词汇，流明圣所则说：读得太多，光会先找到你。",
       "constant": false, "selective": false, "insertion_order": 59, "enabled": true, "position": "before_char", "priority": 12
     },
     {
       "id": 60, "category": "geography", "title": "银河五旋臂",
       "keys": ["旋臂", "银河", "星区", "方位"],
       "comment": "银河地理总览。",
-      "content": "已知文明分布在银河的五条旋臂上，俗称「五弦」。人类的活动范围覆盖其中三弦：北弦（碎镣、漂泊）、中弦（白塔、赤冠、烬海）与南弦（蓝潮、灰潮、锻星）。星图以「弦、区、系」三级划分方位。",
+      "content": "已知文明分布在银河的五条旋臂上，俗称「五弦」。人类的活动范围覆盖其中三弦：北弦（破枷、漂泊）、中弦（奥瑞利安、绯冠、烬海）与南弦（蓝潮、灰潮、赫菲斯托斯）。星图以「弦、区、系」三级划分方位。",
       "constant": true, "selective": false, "insertion_order": 60, "enabled": true, "position": "before_char", "priority": 15
     },
     {
@@ -433,52 +433,52 @@
       "constant": true, "selective": false, "insertion_order": 61, "enabled": true, "position": "before_char", "priority": 18
     },
     {
-      "id": 62, "category": "geography", "title": "织光座",
-      "keys": ["织光座", "白塔首都", "穹环", "织光"],
-      "comment": "白塔首都。",
-      "content": "织光座是白塔合众国首都星系：温带行星「织光」上坐落着议会与大学城，环绕它的「穹环站」是心网中枢与专利登记中心。整座星系灯火通明，是余烬纪元少有的「夜不熄灯」之地。",
+      "id": 62, "category": "geography", "title": "Lumina",
+      "keys": ["Lumina", "奥瑞利安首都", "穹环", "织光"],
+      "comment": "奥瑞利安首都。",
+      "content": "Lumina是奥瑞利安合众国首都星系：温带行星「织光」上坐落着议会与大学城，环绕它的「穹环站」是心网中枢与专利登记中心。整座星系灯火通明，是余烬纪元少有的「夜不熄灯」之地。",
       "constant": false, "selective": false, "insertion_order": 62, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 63, "category": "geography", "title": "焰庭",
-      "keys": ["焰庭", "赤冠首都", "皇都", "王座"],
-      "comment": "赤冠首都。",
-      "content": "焰庭是赤冠王朝的皇都行星：赤红荒漠上矗立着皇宫与万阶长阶，永燃王座的火炬在最高处昼夜燃烧。封臣大典、骑士册封与处刑都在王座前的广场举行——荣耀与恐惧，是这座城市的两种空气。",
+      "id": 63, "category": "geography", "title": "Flamecourt",
+      "keys": ["Flamecourt", "绯冠首都", "皇都", "王座"],
+      "comment": "绯冠首都。",
+      "content": "Flamecourt是绯冠王朝的皇都行星：赤红荒漠上矗立着皇宫与万阶长阶，永燃王座的火炬在最高处昼夜燃烧。封臣大典、骑士册封与处刑都在王座前的广场举行——荣耀与恐惧，是这座城市的两种空气。",
       "constant": false, "selective": false, "insertion_order": 63, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 64, "category": "geography", "title": "潮汐港",
-      "keys": ["潮汐港", "蓝潮首都", "交易所", "清算"],
+      "id": 64, "category": "geography", "title": "Tideport",
+      "keys": ["Tideport", "蓝潮首都", "交易所", "清算"],
       "comment": "蓝潮首都。",
-      "content": "潮汐港是蓝潮商盟首都星系：暖洋行星「潮汐主星」、轨道金融城「算盘环」与富豪庄园星「银湾」三体共转。全银河的钱都在这里过手，连海潮的涨落都按交易所的开闭钟校准。",
+      "content": "Tideport是蓝潮商盟首都星系：暖洋行星「潮汐主星」、轨道金融城「Abacus Ring」与富豪庄园星「Silverbay」三体共转。全银河的钱都在这里过手，连海潮的涨落都按交易所的开闭钟校准。",
       "constant": false, "selective": false, "insertion_order": 64, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 65, "category": "geography", "title": "万机熔炉",
-      "keys": ["万机熔炉", "锻星圣地", "大熔炉", "砧座"],
-      "comment": "锻星圣地。",
-      "content": "万机熔炉是锻星教团圣地星系：恒星熔炼巨构「大熔炉」吞食小行星，吐出炉火与舰队。熔岩行星「砧座」上坐落教团总殿，环绕的「冷却环」是新舰淬火之地。整片星域回荡着锻造的轰鸣，如亘古的祈祷。",
+      "id": 65, "category": "geography", "title": "Vulcan's Hearth",
+      "keys": ["Vulcan's Hearth", "赫菲斯托斯圣地", "大熔炉", "砧座"],
+      "comment": "赫菲斯托斯圣地。",
+      "content": "Vulcan's Hearth是赫菲斯托斯教团圣地星系：恒星熔炼巨构「大熔炉」吞食小行星，吐出炉火与舰队。熔岩行星「砧座」上坐落教团总殿，环绕的「冷却环」是新舰淬火之地。整片星域回荡着锻造的轰鸣，如亘古的祈祷。",
       "constant": false, "selective": false, "insertion_order": 65, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 66, "category": "geography", "title": "归途号",
-      "keys": ["归途号", "母舰", "漂泊首都", "甲板"],
+      "id": 66, "category": "geography", "title": "Homebound",
+      "keys": ["Homebound", "母舰", "漂泊首都", "甲板"],
       "comment": "漂泊母舰。",
-      "content": "归途号是漂泊舰队的母舰：一艘大崩落时代搁浅的曦光古舰，被数代舰队人改建为漂流的钢铁城邦。上层甲板有集市与生态穹顶，轮机深渊里有世代守护古引擎的轮机僧。它不在任何星图固定的坐标上——它永远在回家。",
+      "content": "Homebound是漂泊舰队的母舰：一艘大崩落时代搁浅的流明古舰，被数代舰队人改建为漂流的钢铁城邦。上层甲板有集市与生态穹顶，轮机深渊里有世代守护古引擎的轮机僧。它不在任何星图固定的坐标上——它永远在回家。",
       "constant": false, "selective": false, "insertion_order": 66, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 67, "category": "geography", "title": "前冠废墟",
-      "keys": ["前冠", "旧都", "灰穹", "废墟"],
+      "id": 67, "category": "geography", "title": "Fallen Crown废墟",
+      "keys": ["Fallen Crown", "旧都", "灰穹", "废墟"],
       "comment": "帝国旧都。",
-      "content": "前冠是星冠帝国的旧都，大崩落中环都会断裂坠毁，如今是封在轨道栅栏里的巨型废墟「灰穹」。赤冠定期组织「遗物回收」与朝圣，盗掘者则从栅栏的缝隙钻进去——帝国最后的宫廷，成了冒险者的金矿与坟场。",
+      "content": "Fallen Crown是星冠帝国的旧都，大崩落中环都会断裂坠毁，如今是封在轨道栅栏里的巨型废墟「灰穹」。绯冠定期组织「遗物回收」与朝圣，盗掘者则从栅栏的缝隙钻进去——帝国最后的宫廷，成了冒险者的金矿与坟场。",
       "constant": false, "selective": false, "insertion_order": 67, "enabled": true, "position": "before_char", "priority": 10
     },
     {
-      "id": 68, "category": "geography", "title": "弃船海",
-      "keys": ["弃船海", "坟场", "残骸", "沉船"],
+      "id": 68, "category": "geography", "title": "Graveyard Sea",
+      "keys": ["Graveyard Sea", "坟场", "残骸", "沉船"],
       "comment": "大崩落遗迹带。",
-      "content": "弃船海是大崩落时代舰队坟场：数千艘战舰与民船挤在同一片空域，随惯性缓缓漂流。这里是拾荒者的金矿、走私者的暗道与鬼故事的故乡。灰潮的骸骨港，就是用弃船海的残骸堆成的。",
+      "content": "Graveyard Sea是大崩落时代舰队坟场：数千艘战舰与民船挤在同一片空域，随惯性缓缓漂流。这里是拾荒者的金矿、走私者的暗道与鬼故事的故乡。灰潮的Boneport，就是用Graveyard Sea的残骸堆成的。",
       "constant": false, "selective": false, "insertion_order": 68, "enabled": true, "position": "before_char", "priority": 10
     },
     {
@@ -506,14 +506,14 @@
       "id": 72, "category": "species", "title": "基因雕琢者",
       "keys": ["基因雕琢者", "雕琢", "贵族", "亚种"],
       "comment": "人类亚种。",
-      "content": "基因雕琢者是经过胚胎定制的「优化人类」，外貌俊美、体质出众，集中在赤冠与蓝潮的上层。雕琢者的子代仍可雕琢，于是贵族血统在数代后愈发「精致」——也愈发雷同，像同一张模具的翻版。",
+      "content": "基因雕琢者是经过胚胎定制的「优化人类」，外貌俊美、体质出众，集中在绯冠与蓝潮的上层。雕琢者的子代仍可雕琢，于是贵族血统在数代后愈发「精致」——也愈发雷同，像同一张模具的翻版。",
       "constant": false, "selective": false, "insertion_order": 72, "enabled": true, "position": "before_char", "priority": 10
     },
     {
       "id": 73, "category": "species", "title": "义体化者",
       "keys": ["义体化", "改造人", "义体", "亚种"],
       "comment": "人类亚种。",
-      "content": "义体化者是接受过深度机械改造的人类：肢体、感官乃至神经皆与钢铁融合。在锻星教团这是一种神圣的「淬炼」，在其他地方则是实用的升级。义体化者的社会地位取决于零件的价格——从矿工的铁肺到贵族的白金脊椎。",
+      "content": "义体化者是接受过深度机械改造的人类：肢体、感官乃至神经皆与钢铁融合。在赫菲斯托斯教团这是一种神圣的「淬炼」，在其他地方则是实用的升级。义体化者的社会地位取决于零件的价格——从矿工的铁肺到贵族的白金脊椎。",
       "constant": false, "selective": false, "insertion_order": 73, "enabled": true, "position": "before_char", "priority": 10
     },
     {
@@ -562,7 +562,7 @@
       "id": 80, "category": "danger", "title": "烬海深处",
       "keys": ["烬海深处", "深渊", "禁地", "真相"],
       "comment": "终极险地。",
-      "content": "烬海深处是星海的终极禁区：失真的引力、噬人的弦流与失控的曦光造物在此交织。深入者带回的只言片语互相矛盾——有人说听见了大沉寂前的钟声，有人说看见首都前冠仍灯火辉煌地「活」在风暴中心。真相沉在那里，等一个不怕死的人。",
+      "content": "烬海深处是星海的终极禁区：失真的引力、噬人的弦流与失控的流明造物在此交织。深入者带回的只言片语互相矛盾——有人说听见了大沉寂前的钟声，有人说看见首都Fallen Crown仍灯火辉煌地「活」在风暴中心。真相沉在那里，等一个不怕死的人。",
       "constant": true, "selective": false, "insertion_order": 80, "enabled": true, "position": "before_char", "priority": 18
     }
   ]

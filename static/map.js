@@ -44,7 +44,6 @@ window.STARMAP = (function () {
   let playerSystemId = null;
   let filters = { territory: true, lanes: true, gates: true, names: true, fog: false };
   let minorSystems = [], allSystems = [], sysById = {}, lanes = [], gates = [];
-  let territoryCanvas = null;
   let dragging = false, lastMouse = null, moved = 0, downPos = null;
   let travelAnim = null;
   let t = 0, lastFrame = performance.now();
@@ -53,8 +52,8 @@ window.STARMAP = (function () {
   let planetImgCache = {};
 
   /* ---------- 星系生成 ---------- */
-  const NAME_A = ["苍", "白", "赤", "青", "蓝", "灰", "银", "金", "铜", "铁", "星", "光", "沙", "霜", "风", "火", "雷", "云", "月", "日", "新", "旧", "远", "孤", "双", "三", "九", "龙", "凤", "鹤", "狼", "鲸", "鹿", "雀", "鸦"];
-  const NAME_B = ["湾", "港", "门", "谷", "原", "岭", "泉", "礁", "角", "丘", "井", "湖", "岩", "沙", "泽", "川", "垣", "关", "驿", "垒", "窟", "屿", "野", "洲", "滩", "岬"];
+  const NAME_A = ["Gliese", "Ross", "Wolf", "Lalande", "Luyten", "Barnard", "Struve", "Kapteyn", "Lacaille", "Groombridge", "Kepler", "Tycho", "Bessel", "Van Maanen", "Lacaille"];
+  const NAME_B = ["61 Cygni", "Procyon", "Altair", "Vega", "Rigel", "Deneb", "Arcturus", "Aldebaran", "Polaris", "Fomalhaut", "Spica", "Regulus", "Achernar", "Bellatrix", "Capella"];
   const ECONS = ["agri", "mine", "forge", "trade", "slum", "refuge", "mixed", "mixed", "tech", "mine"];
   const PLANET_TYPES = [
     ["barren", 18], ["gas", 16], ["ice", 13], ["desert", 12], ["metal", 10], ["toxic", 8],
@@ -64,7 +63,7 @@ window.STARMAP = (function () {
     gaia: "盖亚", ocean: "海洋", desert: "荒漠", jungle: "丛林", ice: "冰封", lava: "熔岩",
     toxic: "剧毒", rad: "辐射", barren: "荒芜", metal: "金属", gas: "气态",
   };
-  const ROMAN = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ", "Ⅶ", "Ⅷ"];
+  const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
   const STAR_COLORS = ["#cfe4ff", "#fff4d6", "#ffd9a8", "#ffc2a0", "#dce8f5"];
 
   function pickWeighted(rng, table) {
@@ -107,10 +106,19 @@ window.STARMAP = (function () {
       return usedPos.some((p) => Math.hypot(p.x - x, p.y - y) < 44);
     };
     const name = () => {
-      let n = NAME_A[Math.floor(rng() * NAME_A.length)] + NAME_B[Math.floor(rng() * NAME_B.length)];
-      if (usedNames.has(n)) {
-        n += ["甲", "乙", "丙", "丁", "戊"][Math.floor(rng() * 5)];
+      let n;
+      const r = rng();
+      if (r < 0.5) {
+        // 星表编号风格：Gliese 731 / Wolf 359
+        n = NAME_A[Math.floor(rng() * NAME_A.length)] + " " + (10 + Math.floor(rng() * 8990));
+      } else if (r < 0.8) {
+        // 系外行星编号风格：Kepler-442
+        n = NAME_A[Math.floor(rng() * NAME_A.length)] + "-" + (10 + Math.floor(rng() * 8990));
+      } else {
+        // 亮星风格
+        n = NAME_B[Math.floor(rng() * NAME_B.length)];
       }
+      if (usedNames.has(n)) n += " b";
       usedNames.add(n);
       return n;
     };
@@ -186,63 +194,72 @@ window.STARMAP = (function () {
     return added;
   }
 
-  /* ---------- 势力范围 ---------- */
-  function buildTerritory() {
-    const size = 180;
-    const off = document.createElement("canvas");
-    off.width = size; off.height = size;
-    const octx = off.getContext("2d");
-    const img = octx.createImageData(size, size);
-    const facs = data.factions.filter((f) => !f.hidden || f.id === "lucent");
-    const influence = (sys) => {
-      if (sys.tier === "capital") return 340;
-      if (sys.tier === "core" || sys.tier === "hub") return 170;
-      if (sys.tier === "hidden") return 80;
-      return 110;
-    };
-    // 预计算每个势力的系统列表
-    const facSystems = facs.map((f) => ({
-      f, sys: allSystems.filter((s) => s.faction === f.id),
-    }));
-    for (let py = 0; py < size; py++) {
-      for (let px = 0; px < size; px++) {
-        const wx = (px / size) * GAL_W, wy = (py / size) * GAL_H;
-        const idx = (py * size + px) * 4;
-        let best = null, bestVal = 75;
-        for (const { f, sys } of facSystems) {
-          if (!sys.length) continue;
-          let minVal = Infinity;
-          for (const s of sys) {
-            const d = Math.hypot(s.x - wx, s.y - wy) - influence(s);
-            if (d < minVal) minVal = d;
-          }
-          if (minVal < bestVal) { bestVal = minVal; best = f; }
-        }
-        // 烬海
-        const de = Math.hypot(EMBER.x - wx, EMBER.y - wy);
-        if (de < EMBER.r) {
-          img.data[idx] = 60; img.data[idx + 1] = 26; img.data[idx + 2] = 34;
-          img.data[idx + 3] = 200 + 55 * (1 - de / EMBER.r);
-          continue;
-        }
-        if (best) {
-          const c = hexToRgb(best.color);
-          const edge = Math.max(0, Math.min(1, 1 - (bestVal - 0) / 90));
-          img.data[idx] = c.r; img.data[idx + 1] = c.g; img.data[idx + 2] = c.b;
-          img.data[idx + 3] = Math.round(46 + 92 * edge);
-        } else {
-          img.data[idx] = 90; img.data[idx + 1] = 100; img.data[idx + 2] = 120;
-          img.data[idx + 3] = 26;
-        }
-      }
-    }
-    octx.putImageData(img, 0, 0);
-    territoryCanvas = off;
-  }
-
+  /* ---------- 势力范围（发光云团） ---------- */
   function hexToRgb(hex) {
     const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return m ? { r: parseInt(m[1], 16), g: parseInt(m[2], 16), b: parseInt(m[3], 16) } : { r: 255, g: 255, b: 255 };
+  }
+
+  const glowSpriteCache = {};
+  function glowSprite(color, intensity) {
+    const key = color + "|" + intensity;
+    if (glowSpriteCache[key]) return glowSpriteCache[key];
+    const c = document.createElement("canvas");
+    c.width = 128; c.height = 128;
+    const g = c.getContext("2d");
+    const { r, g: gr, b } = hexToRgb(color);
+    const grad = g.createRadialGradient(64, 64, 0, 64, 64, 64);
+    grad.addColorStop(0, "rgba(" + r + "," + gr + "," + b + "," + intensity + ")");
+    grad.addColorStop(0.45, "rgba(" + r + "," + gr + "," + b + "," + (intensity * 0.42).toFixed(3) + ")");
+    grad.addColorStop(1, "rgba(" + r + "," + gr + "," + b + ",0)");
+    g.fillStyle = grad;
+    g.fillRect(0, 0, 128, 128);
+    glowSpriteCache[key] = c;
+    return c;
+  }
+
+  function territoryInfluence(sys) {
+    if (sys.tier === "capital") return 330;
+    if (sys.tier === "core" || sys.tier === "hub") return 170;
+    if (sys.tier === "hidden") return 95;
+    return 112;
+  }
+
+  /* ---------- 银河旋臂背景 ---------- */
+  function drawArms() {
+    const zoom = cam.scale;
+    if (zoom > 1.0) return;
+    const fade = Math.max(0, 1 - (zoom - 0.14) / 0.9);
+    if (fade <= 0.01) return;
+    const cx = GAL_W / 2, cy = GAL_H / 2;
+    ctx.save();
+    ctx.globalCompositeOperation = "lighter";
+    ctx.lineCap = "round";
+    for (let arm = 0; arm < 3; arm++) {
+      const rot0 = (arm * Math.PI * 2) / 3 + 0.5;
+      const path = () => {
+        ctx.beginPath();
+        for (let a = -0.6; a < Math.PI * 2.05; a += 0.03) {
+          const r = 95 * Math.exp(0.335 * a);
+          const x = cx + Math.cos(a + rot0) * r * 0.92;
+          const y = cy + Math.sin(a + rot0) * r * 0.7;
+          const p = worldToScreen(x, y);
+          if (a === -0.6) ctx.moveTo(p.x, p.y);
+          else ctx.lineTo(p.x, p.y);
+        }
+      };
+      // 宽晕
+      path();
+      ctx.strokeStyle = "rgba(150,190,255," + (0.16 * fade).toFixed(3) + ")";
+      ctx.lineWidth = 26;
+      ctx.stroke();
+      // 亮芯
+      path();
+      ctx.strokeStyle = "rgba(190,220,255," + (0.5 * fade).toFixed(3) + ")";
+      ctx.lineWidth = 5;
+      ctx.stroke();
+    }
+    ctx.restore();
   }
 
   /* ---------- 行星贴图 ---------- */
@@ -353,13 +370,35 @@ window.STARMAP = (function () {
   }
 
   function drawTerritory() {
-    if (!filters.territory || !territoryCanvas) return;
+    if (!filters.territory) return;
     const zoom = cam.scale;
-    if (zoom > 1.4) return;
+    if (zoom > 1.5) return;
+    // 缩放越大，云团越淡，直至让位于航道与星点
+    const fade = Math.max(0, 1 - (zoom - 0.12) / 0.8);
+    if (fade <= 0.01) return;
+    const bounds = visibleBounds();
     ctx.save();
-    ctx.imageSmoothingEnabled = true;
-    ctx.globalAlpha = zoom < 0.35 ? 0.9 : 0.55;
-    ctx.drawImage(territoryCanvas, 0, 0, GAL_W, GAL_H);
+    ctx.globalCompositeOperation = "lighter";
+    for (const sys of allSystems) {
+      if (sys.faction === "rim" || !sys.faction) continue;
+      if (sys.x < bounds.x0 || sys.x > bounds.x1 || sys.y < bounds.y0 || sys.y > bounds.y1) continue;
+      const fac = factionOf(sys);
+      if (!fac) continue;
+      const p = worldToScreen(sys.x, sys.y);
+      const r = territoryInfluence(sys) * zoom;
+      // 缓慢呼吸的云团
+      const breath = 0.62 + 0.38 * (0.5 + 0.5 * Math.sin(t * 0.00055 + sys.x * 0.013 + sys.y * 0.007));
+      ctx.globalAlpha = Math.min(1, breath * fade);
+      const sprite = glowSprite(fac.color, 0.5);
+      ctx.drawImage(sprite, p.x - r, p.y - r, r * 2, r * 2);
+    }
+    // 烬海：暗红废墟云
+    const ep = worldToScreen(EMBER.x, EMBER.y);
+    const er = EMBER.r * zoom;
+    ctx.globalAlpha = 0.75 * fade;
+    ctx.drawImage(glowSprite("#7a2a2a", 0.6), ep.x - er, ep.y - er, er * 2, er * 2);
+    ctx.globalAlpha = 0.35 * fade;
+    ctx.drawImage(glowSprite("#2a0d12", 0.85), ep.x - er * 0.7, ep.y - er * 0.7, er * 1.4, er * 1.4);
     ctx.restore();
   }
 
@@ -368,10 +407,12 @@ window.STARMAP = (function () {
     const zoom = cam.scale;
     if (zoom < 0.22 || zoom > 3.6) return;
     const bounds = visibleBounds();
-    const alpha = Math.min(0.85, Math.max(0.12, (zoom - 0.22) * 1.2));
+    const alpha = Math.min(0.8, Math.max(0.1, (zoom - 0.22) * 1.15));
     ctx.save();
     ctx.lineWidth = 1;
     ctx.strokeStyle = "rgba(122,180,255," + alpha + ")";
+    ctx.setLineDash([7, 9]);
+    ctx.lineDashOffset = -t * 0.012; // 缓慢流动的航标光
     ctx.beginPath();
     for (const lane of lanes) {
       const a = sysById[lane.a], b = sysById[lane.b];
@@ -602,6 +643,7 @@ window.STARMAP = (function () {
   function render() {
     if (mode === "galaxy") {
       drawBackground();
+      drawArms();
       drawTerritory();
       drawLanes();
       drawGates();
@@ -797,6 +839,7 @@ window.STARMAP = (function () {
     ctx = canvas.getContext("2d");
     cb = callbacks || {};
     new ResizeObserver(resize).observe(canvas.parentElement);
+    window.addEventListener("resize", resize);
     resize();
     canvas.addEventListener("wheel", onWheel, { passive: false });
     canvas.addEventListener("mousedown", onMouseDown);
@@ -812,12 +855,17 @@ window.STARMAP = (function () {
     data = core;
     lanes = core.lanes.map((l) => ({ a: l[0], b: l[1], key: l.slice().sort().join("|") }));
     gates = core.gates;
+    // 手工星系缺行星数据的，补齐生成行星（保证每个星系都可探索）
+    core.systems.forEach((s) => {
+      if (!Array.isArray(s.planets) || s.planets.length === 0) {
+        s.planets = genPlanets(s.id, s.name);
+      }
+    });
     minorSystems = genMinorSystems(core.systems);
     allSystems = core.systems.concat(minorSystems);
     sysById = {};
     allSystems.forEach((s) => { sysById[s.id] = s; });
     autoLanes();
-    buildTerritory();
   }
 
   function setExplored(list) {
@@ -887,11 +935,14 @@ window.STARMAP = (function () {
   function getSystem(id) { return sysById[id]; }
   function getPlanetVisualUrl(planet) { return planetVisual(planet); }
   function currentScale() { return mode === "galaxy" ? cam.scale : sysCam.scale; }
+  function isLaneConnected(a, b) {
+    return lanes.some((l) => (l.a === a && l.b === b) || (l.a === b && l.b === a));
+  }
 
   return {
     init, loadData, setExplored, setPlayerLocation, setFilter,
     selectSystem, selectPlanet, flyToSystem, goHome, resetView, zoomStep,
-    enterSystem, exitSystem, isSystemMode, animateTravel,
-    getSystems, getSystem, getPlanetVisualUrl, currentScale,
+    enterSystem, exitSystem, isSystemMode, animateTravel, refresh: resize,
+    getSystems, getSystem, getPlanetVisualUrl, currentScale, isLaneConnected,
   };
 })();
